@@ -62,10 +62,23 @@
                     <el-form-item label="审批人">
                         <el-cascader :options="options" v-model="form.options"></el-cascader>
                     </el-form-item>
-                    <!-- <el-form-item label="选择开关">
+                    <el-form-item label="领导审批">
                         <el-switch v-model="form.delivery"></el-switch>
                     </el-form-item>
-                    <el-form-item label="多选框">
+                    <el-form-item label="添加附件">
+                        <el-upload
+                            class="upload-demo"
+                            drag
+                            action="http://jsonplaceholder.typicode.com/api/posts/"
+                            multiple>
+                            <i class="el-icon-upload"></i>
+                            <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
+                            <div class="el-upload__tip" slot="tip">只能上传jpg/png文件，且不超过500kb</div>
+                         </el-upload>
+                    </el-form-item>
+
+                    
+                    <!-- <el-form-item label="多选框">
                         <el-checkbox-group v-model="form.type">
                             <el-checkbox label="步步高" name="type"></el-checkbox>
                             <el-checkbox label="小天才" name="type"></el-checkbox>
