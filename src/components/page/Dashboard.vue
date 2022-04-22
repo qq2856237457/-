@@ -48,7 +48,7 @@
                                 <i class="el-icon-lx-notice grid-con-icon"></i>
                                 <div class="grid-cont-right">
                                     <div class="grid-num">321</div>
-                                    <div>系统消息</div>
+                                    <div>通知公告</div>
                                 </div>
                             </div>
                         </el-card>

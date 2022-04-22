@@ -67,9 +67,14 @@ export default {
                     title: '工资查询'
                 },
                 {
+                    icon: 'el-icon-lx-cascades',
+                    index: 'vacation',
+                    title: '请假查询'
+                },
+                {
                     icon: 'el-icon-lx-copy',
                     index: 'tabs',
-                    title: '系统消息'
+                    title: '通知公告'
                 },
                 {
                     icon: 'el-icon-lx-calendar',

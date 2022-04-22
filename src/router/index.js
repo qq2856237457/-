@@ -30,9 +30,14 @@ export default new Router({
                     meta: { title: '工资查询' }
                 },
                 {
+                    path: '/vacation',
+                    component: () => import(/* webpackChunkName: "table" */ '../components/page/Vacation.vue'),
+                    meta: { title: '请假查询' }
+                },
+                {
                     path: '/tabs',
                     component: () => import(/* webpackChunkName: "tabs" */ '../components/page/Tabs.vue'),
-                    meta: { title: '系统消息' }
+                    meta: { title: '通知公告' }
                 },
                 {
                     path: '/form',
