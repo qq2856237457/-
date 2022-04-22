@@ -1,0 +1,86 @@
+{
+    "list": [{
+            "id": 1,
+            "name": "基本工资一级",
+            "money": 123,
+            "level": "等级一",
+            "state": "成功",
+            "date": "2019-11-1",
+            "thumb": "https://lin-xin.gitee.io/images/post/wms.png"
+        },
+        {
+            "id": 2,
+            "name": "基本工资二级",
+            "money": 456,
+            "level": "等级二",
+            "state": "成功",
+            "date": "2019-10-11",
+            "thumb": "https://lin-xin.gitee.io/images/post/node3.png"
+        },
+        {
+            "id": 3,
+            "name": "工龄工资",
+            "money": 789,
+            "level": "湖南省长沙市",
+            "state": "失败",
+            "date": "2019-11-11",
+            "thumb": "https://lin-xin.gitee.io/images/post/parcel.png"
+        },
+        {
+            "id": 4,
+            "name": "住房公积金一级",
+            "money": 1011,
+            "level": "福建省厦门市鼓浪屿",
+            "state": "成功",
+            "date": "2019-10-20",
+            "thumb": "https://lin-xin.gitee.io/images/post/notice.png"
+        },
+        {
+            "id": 5,
+            "name": "住房公积金二级",
+            "money": 1011,
+            "level": "福建省厦门市鼓浪屿",
+            "state": "成功",
+            "date": "2019-10-20",
+            "thumb": "https://lin-xin.gitee.io/images/post/notice.png"
+        },
+        {
+            "id": 6,
+            "name": "医疗保险一级",
+            "money": 1011,
+            "level": "福建省厦门市鼓浪屿",
+            "state": "成功",
+            "date": "2019-10-20",
+            "thumb": "https://lin-xin.gitee.io/images/post/notice.png"
+        },
+        {
+            "id": 7,
+            "name": "医疗保险二级",
+            "money": 1011,
+            "level": "福建省厦门市鼓浪屿",
+            "state": "成功",
+            "date": "2019-10-20",
+            "thumb": "https://lin-xin.gitee.io/images/post/notice.png"
+        },
+        {
+            "id": 8,
+            "name": "绩效工资一级",
+            "money": 1011,
+            "level": "福建省厦门市鼓浪屿",
+            "state": "成功",
+            "date": "2019-10-20",
+            "thumb": "https://lin-xin.gitee.io/images/post/notice.png"
+        },
+        {
+            "id": 9,
+            "name": "绩效工资二级",
+            "money": 1011,
+            "level": "福建省厦门市鼓浪屿",
+            "state": "成功",
+            "date": "2019-10-20",
+            "thumb": "https://lin-xin.gitee.io/images/post/notice.png"
+        }
+        
+    ],
+    "pageTotal": 4
+}

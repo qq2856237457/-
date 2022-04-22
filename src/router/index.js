@@ -27,17 +27,22 @@ export default new Router({
                 {
                     path: '/table',
                     component: () => import(/* webpackChunkName: "table" */ '../components/page/BaseTable.vue'),
-                    meta: { title: '基础表格' }
+                    meta: { title: '工资查询' }
                 },
                 {
                     path: '/tabs',
                     component: () => import(/* webpackChunkName: "tabs" */ '../components/page/Tabs.vue'),
-                    meta: { title: 'tab选项卡' }
+                    meta: { title: '系统消息' }
                 },
                 {
                     path: '/form',
                     component: () => import(/* webpackChunkName: "form" */ '../components/page/BaseForm.vue'),
                     meta: { title: '基本表单' }
+                },
+                {
+                    path: '/work',
+                    component: () => import(/* webpackChunkName: "form" */ '../components/page/WorkForm.vue'),
+                    meta: { title: '考勤管理' }
                 },
                 {
                     // 富文本编辑器组件

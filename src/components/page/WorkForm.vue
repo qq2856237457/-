@@ -3,23 +3,13 @@
         <div class="crumbs">
             <el-breadcrumb separator="/">
                 <el-breadcrumb-item>
-                    <i class="el-icon-lx-cascades"></i> 工资查询
+                    <i class="el-icon-lx-cascades"></i> 考勤管理
                 </el-breadcrumb-item>
             </el-breadcrumb>
         </div>
         <div class="container">
             <div class="handle-box">
-                <el-button
-                    type="primary"
-                    icon="el-icon-delete"
-                    class="handle-del mr10"
-                    @click="delAllSelection"
-                >批量删除</el-button>
-                <el-select v-model="query.address" placeholder="项目类型" class="handle-select mr10">
-                    <el-option key="1" label="广东省" value="广东省"></el-option>
-                    <el-option key="2" label="湖南省" value="湖南省"></el-option>
-                </el-select>
-                <el-input v-model="query.name" placeholder="项目名称" class="handle-input mr10"></el-input>
+                <el-input v-model="query.name" placeholder="员工姓名" class="handle-input mr10"></el-input>
                 <el-button type="primary" icon="el-icon-search" @click="handleSearch">搜索</el-button>
             </div>
             <el-table
@@ -32,20 +22,17 @@
             >
                 <el-table-column type="selection" width="55" align="center"></el-table-column>
                 <el-table-column prop="id" label="序号" width="55" align="center"></el-table-column>
-                <el-table-column prop="name" label="项目名称"></el-table-column>
-                <el-table-column label="涉及金额">
-                    <template slot-scope="scope">￥{{scope.row.money}}</template>
-                </el-table-column>
-                <el-table-column prop="level" label="岗位等级"></el-table-column>
+                <el-table-column prop="name" label="员工姓名"></el-table-column>
+                <el-table-column prop="date" label="出勤日期"></el-table-column>
+                <el-table-column prop="uptime" label="上班时间"></el-table-column>
+                <el-table-column prop="downtime" label="下班时间"></el-table-column>
                 <el-table-column label="状态" align="center">
                     <template slot-scope="scope">
                         <el-tag
-                            :type="scope.row.state==='成功'?'success':(scope.row.state==='失败'?'danger':'')"
+                            :type="scope.row.state==='正常'?'success':'danger'"
                         >{{scope.row.state}}</el-tag>
                     </template>
                 </el-table-column>
-
-                <el-table-column prop="date" label="入账时间"></el-table-column>
                 <el-table-column label="操作" width="180" align="center">
                     <template slot-scope="scope">
                         <el-button
@@ -120,7 +107,7 @@ export default {
     methods: {
         // 获取 easy-mock 的模拟数据
         getData() {
-            fetchData({url: './mock/money.json',...this.query}).then(res => {
+            fetchData({url: './mock/work.json',...this.query}).then(res => {
                 console.log(res.list);
                 this.tableData = res.list;
                 this.pageTotal = res.pageTotal || 50;

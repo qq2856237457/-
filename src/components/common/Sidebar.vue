@@ -64,12 +64,12 @@ export default {
                 {
                     icon: 'el-icon-lx-cascades',
                     index: 'table',
-                    title: '基础表格'
+                    title: '工资查询'
                 },
                 {
                     icon: 'el-icon-lx-copy',
                     index: 'tabs',
-                    title: 'tab选项卡'
+                    title: '系统消息'
                 },
                 {
                     icon: 'el-icon-lx-calendar',
@@ -79,6 +79,10 @@ export default {
                         {
                             index: 'form',
                             title: '基本表单'
+                        },
+                        {
+                            index: 'work',
+                            title: '考勤管理'
                         },
                         {
                             index: '3-2',
