@@ -3,25 +3,25 @@
         <div class="crumbs">
             <el-breadcrumb separator="/">
                 <el-breadcrumb-item>
-                    <i class="el-icon-lx-calendar"></i> 表单
+                    <i class="el-icon-lx-calendar"></i> 审批
                 </el-breadcrumb-item>
-                <el-breadcrumb-item>基本表单</el-breadcrumb-item>
+                <el-breadcrumb-item>请假审批</el-breadcrumb-item>
             </el-breadcrumb>
         </div>
         <div class="container">
             <div class="form-box">
                 <el-form ref="form" :model="form" label-width="80px">
-                    <el-form-item label="表单名称">
+                    <el-form-item label="请假原因">
                         <el-input v-model="form.name"></el-input>
                     </el-form-item>
-                    <el-form-item label="选择器">
-                        <el-select v-model="form.region" placeholder="请选择">
-                            <el-option key="bbk" label="步步高" value="bbk"></el-option>
-                            <el-option key="xtc" label="小天才" value="xtc"></el-option>
-                            <el-option key="imoo" label="imoo" value="imoo"></el-option>
+                    <el-form-item label="请假类型">
+                        <el-select v-model="form.region" placeholder="请假类型">
+                            <el-option key="bbk" label="事假" value="bbk"></el-option>
+                            <el-option key="xtc" label="病假" value="xtc"></el-option>
+                            <el-option key="imoo" label="休假" value="imoo"></el-option>
                         </el-select>
                     </el-form-item>
-                    <el-form-item label="日期时间">
+                    <el-form-item label="开始时间">
                         <el-col :span="11">
                             <el-date-picker
                                 type="date"
@@ -40,10 +40,29 @@
                             ></el-time-picker>
                         </el-col>
                     </el-form-item>
-                    <el-form-item label="城市级联">
+                    <el-form-item label="结束时间">
+                        <el-col :span="11">
+                            <el-date-picker
+                                type="date"
+                                placeholder="选择日期"
+                                v-model="form.date1"
+                                value-format="yyyy-MM-dd"
+                                style="width: 100%;"
+                            ></el-date-picker>
+                        </el-col>
+                        <el-col class="line" :span="2">-</el-col>
+                        <el-col :span="11">
+                            <el-time-picker
+                                placeholder="选择时间"
+                                v-model="form.date2"
+                                style="width: 100%;"
+                            ></el-time-picker>
+                        </el-col>
+                    </el-form-item>
+                    <el-form-item label="审批人">
                         <el-cascader :options="options" v-model="form.options"></el-cascader>
                     </el-form-item>
-                    <el-form-item label="选择开关">
+                    <!-- <el-form-item label="选择开关">
                         <el-switch v-model="form.delivery"></el-switch>
                     </el-form-item>
                     <el-form-item label="多选框">
@@ -62,9 +81,9 @@
                     </el-form-item>
                     <el-form-item label="文本框">
                         <el-input type="textarea" rows="5" v-model="form.desc"></el-input>
-                    </el-form-item>
+                    </el-form-item> -->
                     <el-form-item>
-                        <el-button type="primary" @click="onSubmit">表单提交</el-button>
+                        <el-button type="primary" @click="onSubmit">提交</el-button>
                         <el-button>取消</el-button>
                     </el-form-item>
                 </el-form>
@@ -81,51 +100,31 @@ export default {
             options: [
                 {
                     value: 'guangdong',
-                    label: '广东省',
+                    label: '组长',
                     children: [
                         {
                             value: 'guangzhou',
-                            label: '广州市',
+                            label: '经理',
                             children: [
                                 {
                                     value: 'tianhe',
-                                    label: '天河区'
+                                    label: '总经理'
                                 },
                                 {
                                     value: 'haizhu',
-                                    label: '海珠区'
+                                    label: '副总经理'
                                 }
                             ]
                         },
-                        {
-                            value: 'dongguan',
-                            label: '东莞市',
-                            children: [
-                                {
-                                    value: 'changan',
-                                    label: '长安镇'
-                                },
-                                {
-                                    value: 'humen',
-                                    label: '虎门镇'
-                                }
-                            ]
-                        }
                     ]
                 },
                 {
                     value: 'hunan',
-                    label: '湖南省',
+                    label: '组长',
                     children: [
                         {
                             value: 'changsha',
-                            label: '长沙市',
-                            children: [
-                                {
-                                    value: 'yuelu',
-                                    label: '岳麓区'
-                                }
-                            ]
+                            label: '经理',
                         }
                     ]
                 }

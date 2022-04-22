@@ -72,6 +72,11 @@ export default {
                     title: '请假查询'
                 },
                 {
+                    icon: 'el-icon-lx-cascades',
+                    index: 'work',
+                    title: '考勤管理'
+                },
+                {
                     icon: 'el-icon-lx-copy',
                     index: 'tabs',
                     title: '通知公告'
@@ -79,15 +84,11 @@ export default {
                 {
                     icon: 'el-icon-lx-calendar',
                     index: '3',
-                    title: '表单相关',
+                    title: '提交审批',
                     subs: [
                         {
                             index: 'form',
-                            title: '基本表单'
-                        },
-                        {
-                            index: 'work',
-                            title: '考勤管理'
+                            title: '请假审批'
                         },
                         {
                             index: '3-2',
