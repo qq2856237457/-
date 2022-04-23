@@ -24,6 +24,7 @@
                 <el-table-column prop="id" label="序号" width="55" align="center"></el-table-column>
                 <el-table-column prop="uptime" label="开始时间"></el-table-column>
                 <el-table-column prop="downtime" label="结束时间"></el-table-column>
+                <el-table-column prop="totaltime" label="总时长"></el-table-column>
                 <el-table-column label="状态" align="center">
                     <template slot-scope="scope">
                         <el-tag
@@ -37,7 +38,7 @@
                             type="text"
                             icon="el-icon-edit"
                             @click="handleEdit(scope.$index, scope.row)"
-                        >编辑</el-button>
+                        >销假</el-button>
                         <el-button
                             type="text"
                             icon="el-icon-delete"
@@ -60,14 +61,9 @@
         </div>
 
         <!-- 编辑弹出框 -->
-        <el-dialog title="编辑" :visible.sync="editVisible" width="30%">
+        <el-dialog title="销假" :visible.sync="editVisible" width="30%">
             <el-form ref="form" :model="form" label-width="70px">
-                <el-form-item label="用户名">
-                    <el-input v-model="form.name"></el-input>
-                </el-form-item>
-                <el-form-item label="地址">
-                    <el-input v-model="form.address"></el-input>
-                </el-form-item>
+                是否销假
             </el-form>
             <span slot="footer" class="dialog-footer">
                 <el-button @click="editVisible = false">取 消</el-button>

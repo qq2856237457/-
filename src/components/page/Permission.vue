@@ -47,7 +47,7 @@
                 <el-table-column label="状态" align="center">
                     <template slot-scope="scope">
                         <el-tag
-                            :type="scope.row.state==='成功'?'success':(scope.row.state==='失败'?'danger':'')"
+                            :type="scope.row.state==='在职'?'success':(scope.row.state==='已离职'?'danger':'')"
                         >{{scope.row.state}}</el-tag>
                     </template>
                 </el-table-column>
@@ -83,11 +83,26 @@
         <!-- 编辑弹出框 -->
         <el-dialog title="编辑" :visible.sync="editVisible" width="30%">
             <el-form ref="form" :model="form" label-width="70px">
-                <el-form-item label="用户名">
+                <el-form-item label="员工姓名">
                     <el-input v-model="form.name"></el-input>
                 </el-form-item>
-                <el-form-item label="地址">
-                    <el-input v-model="form.address"></el-input>
+                <el-form-item label="岗位等级">
+                    <el-input v-model="form.level"></el-input>
+                </el-form-item>
+                <el-form-item label="部门">
+                    <el-input v-model="form.part"></el-input>
+                </el-form-item>
+                <el-form-item label="薪资设置">
+                    <el-input v-model="form.money"></el-input>
+                </el-form-item>
+                <el-form-item label="考勤">
+                    <el-input v-model="form.day"></el-input>
+                </el-form-item>
+                <el-form-item label="绩效管理">
+                    <el-input v-model="form.manage"></el-input>
+                </el-form-item>
+                <el-form-item label="入职时间">
+                    <el-input v-model="form.date"></el-input>
                 </el-form-item>
             </el-form>
             <span slot="footer" class="dialog-footer">

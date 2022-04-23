@@ -64,11 +64,20 @@
         <!-- 编辑弹出框 -->
         <el-dialog title="编辑" :visible.sync="editVisible" width="30%">
             <el-form ref="form" :model="form" label-width="70px">
-                <el-form-item label="用户名">
-                    <el-input v-model="form.name"></el-input>
+                <el-form-item label="姓名:">
+                    {{form.name}}
                 </el-form-item>
-                <el-form-item label="地址">
-                    <el-input v-model="form.address"></el-input>
+                <el-form-item label="出勤日期">
+                    <el-input v-model="form.date"></el-input>
+                </el-form-item>
+                <el-form-item label="上班时间">
+                    <el-input v-model="form.uptime"></el-input>
+                </el-form-item>
+                <el-form-item label="下班时间">
+                    <el-input v-model="form.downtime"></el-input>
+                </el-form-item>
+                <el-form-item label="状态">
+                    <el-input v-model="form.state"></el-input>
                 </el-form-item>
             </el-form>
             <span slot="footer" class="dialog-footer">
