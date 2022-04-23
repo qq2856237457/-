@@ -3,7 +3,7 @@
         <div class="crumbs">
             <el-breadcrumb separator="/">
                 <el-breadcrumb-item>
-                    <i class="el-icon-lx-cascades"></i> 只有用 admin 账号登录的才拥有管理员权限，才能进到这个页面，其他账号想进来都会跳到403页面，重新用管理员账号登录才有权限。
+                    <i class="el-icon-lx-cascades"></i> 绩效管理
                 </el-breadcrumb-item>
             </el-breadcrumb>
         </div>
@@ -34,14 +34,10 @@
                 <el-table-column prop="id" label="序号" width="55" align="center"></el-table-column>
                 <el-table-column prop="name" label="员工姓名"></el-table-column>
                 <el-table-column prop="level" label="岗位等级"></el-table-column>
-                <el-table-column prop="part" label="部门"></el-table-column>
-                <el-table-column prop="money" label="薪资设置">
-                    <template slot-scope="scope">￥{{scope.row.money}}</template>
-                </el-table-column>
-                <el-table-column prop="day" label="考勤">
+                <el-table-column prop="money" label="业绩考核"></el-table-column>
+                <el-table-column prop="day" label="行为考核">
                   <template slot-scope="scope">出勤{{scope.row.day}}天</template>
                 </el-table-column>
-                <el-table-column prop="manage" label="绩效管理"></el-table-column>
                 <el-table-column prop="date" label="入职时间"></el-table-column>
                 
                 <el-table-column label="状态" align="center">

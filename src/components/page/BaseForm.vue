@@ -45,7 +45,7 @@
                             <el-date-picker
                                 type="date"
                                 placeholder="选择日期"
-                                v-model="form.date1"
+                                v-model="form.date3"
                                 value-format="yyyy-MM-dd"
                                 style="width: 100%;"
                             ></el-date-picker>
@@ -54,7 +54,7 @@
                         <el-col :span="11">
                             <el-time-picker
                                 placeholder="选择时间"
-                                v-model="form.date2"
+                                v-model="form.date4"
                                 style="width: 100%;"
                             ></el-time-picker>
                         </el-col>
@@ -147,6 +147,8 @@ export default {
                 region: '',
                 date1: '',
                 date2: '',
+                date3: '',
+                date4: '',
                 delivery: true,
                 type: ['步步高'],
                 resource: '小天才',

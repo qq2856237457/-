@@ -50,6 +50,11 @@ export default new Router({
                     meta: { title: '考勤管理' }
                 },
                 {
+                    path: '/manage',
+                    component: () => import(/* webpackChunkName: "form" */ '../components/page/Manage.vue'),
+                    meta: { title: '绩效管理' }
+                },
+                {
                     // 富文本编辑器组件
                     path: '/editor',
                     component: () => import(/* webpackChunkName: "editor" */ '../components/page/VueEditor.vue'),
@@ -95,7 +100,7 @@ export default new Router({
                     // 权限页面
                     path: '/permission',
                     component: () => import(/* webpackChunkName: "permission" */ '../components/page/Permission.vue'),
-                    meta: { title: '权限测试', permission: true }
+                    meta: { title: '管理员界面', permission: true }
                 },
                 {
                     path: '/404',

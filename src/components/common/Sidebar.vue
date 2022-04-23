@@ -75,6 +75,10 @@ export default {
                     icon: 'el-icon-lx-cascades',
                     index: 'work',
                     title: '考勤管理'
+                },{
+                    icon: 'el-icon-lx-cascades',
+                    index: 'manage',
+                    title: '绩效管理'
                 },
                 {
                     icon: 'el-icon-lx-copy',
@@ -147,7 +151,7 @@ export default {
                     subs: [
                         {
                             index: 'permission',
-                            title: '权限测试'
+                            title: '管理员界面'
                         },
                         {
                             index: '404',
