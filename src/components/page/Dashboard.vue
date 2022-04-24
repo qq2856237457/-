@@ -6,8 +6,8 @@
                     <div class="user-info">
                         <img src="../../assets/img/img.jpg" class="user-avator" alt />
                         <div class="user-info-cont">
-                            <div class="user-info-name">{{name}}</div>
-                            <div>{{role}}</div>
+                            <div class="user-info-name">{{userName}}</div>
+                            <div :class="getRoleColor()">{{role}}</div>
                             <div>{{'今日已打卡3小时'}}</div>
                         </div>
                     </div>
@@ -117,7 +117,7 @@ export default {
     name: 'dashboard',
     data() {
         return {
-            name: localStorage.getItem('ms_username'),
+            userName: localStorage.getItem('ms_username'),
             todoList: [
                 {
                     title: '产品分析会议',
@@ -224,7 +224,7 @@ export default {
     },
     computed: {
         role() {
-            return this.name === 'admin' ? '超级管理员' : '普通用户';
+            return this.userName === 'admin' ? '超级管理员' : this.userName === 'leader' ? '领导' : '普通用户';
         }
     },
     // created() {
@@ -245,6 +245,10 @@ export default {
                 const date = new Date(now - (6 - index) * 86400000);
                 item.name = `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`;
             });
+        },
+        getRoleColor() {
+            return this.userName === 'admin' ? 'user-info-role-admin' 
+                : this.userName === 'leader' ? 'user-info-role-leader' : 'user-info-role-common';
         }
         // handleListener() {
         //     bus.$on('collapse', this.handleBus);
@@ -341,6 +345,22 @@ export default {
     font-size: 14px;
     color: #999;
 }
+
+.user-info-role-admin {
+    margin: 5px 0px;
+    color: rgb(241, 16, 16);
+} 
+
+.user-info-role-leader {
+    margin: 5px 0px;
+    color: rgb(46, 124, 15);
+}
+
+.user-info-role-common {
+    margin: 5px 0px;
+    color: rgb(46, 124, 15);
+}
+
 
 .user-info-cont div:first-child {
     font-size: 30px;

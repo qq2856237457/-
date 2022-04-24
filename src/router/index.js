@@ -76,7 +76,7 @@ export default new Router({
                     // vue-schart组件
                     path: '/charts',
                     component: () => import(/* webpackChunkName: "chart" */ '../components/page/BaseCharts.vue'),
-                    meta: { title: '工作情况一览图' }
+                    meta: { title: '工作情况' }
                 },
                 {
                     // 待办事项组件
