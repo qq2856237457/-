@@ -2,12 +2,14 @@
     <div>
         <div class="crumbs">
             <el-breadcrumb separator="/">
-                <el-breadcrumb-item>
-                    <i class="el-icon-lx-cascades"></i> 只有用 admin 账号登录的才拥有管理员权限，才能进到这个页面，其他账号想进来都会跳到403页面，重新用管理员账号登录才有权限。
-                </el-breadcrumb-item>
+                <el-breadcrumb-item><i class="el-icon-lx-calendar"></i> 管理员界面</el-breadcrumb-item>
+                <el-breadcrumb-item>员工管理</el-breadcrumb-item>
             </el-breadcrumb>
         </div>
         <div class="container">
+            <div class="plugins-tips">
+                只有用 admin 账号登录的才拥有管理员权限，才能进到这个页面，其他账号想进来都会跳到403页面，重新用管理员账号登录才有权限。
+            </div>
             <div class="handle-box">
                 <el-button
                     type="primary"

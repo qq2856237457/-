@@ -2,15 +2,10 @@
     <section class="main">
         <div class="crumbs">
             <el-breadcrumb separator="/">
-                <el-breadcrumb-item><i class="el-icon-rank"></i> 拖拽组件</el-breadcrumb-item>
-                <el-breadcrumb-item>拖拽排序</el-breadcrumb-item>
+                <el-breadcrumb-item><i class="el-icon-rank"></i> 待办事项</el-breadcrumb-item>
             </el-breadcrumb>
         </div>
         <div class="container">
-            <div class="plugins-tips">
-                Vue.Draggable：基于 Sortable.js 的 Vue 拖拽组件。
-                访问地址：<a href="https://github.com/SortableJS/Vue.Draggable" target="_blank">Vue.Draggable</a>
-            </div>
             <div class="drag-box">
                 <div class="drag-box-item">
                     <div class="item-title">todo</div>
@@ -62,43 +57,43 @@
                 todo: [
                     {
                         id: 1,
-                        content: '开发图表组件'
+                        content: '学习语文'
                     },
                     {
                         id: 2,
-                        content: '开发拖拽组件'
+                        content: '学习语文'
                     },
                     {
                         id: 3,
-                        content: '开发权限测试组件'
+                        content: '学习语文'
                     }
                 ],
                 doing: [
                     {
                         id: 1,
-                        content: '开发登录注册页面'
+                        content: '学习语文'
                     },
                     {
                         id: 2,
-                        content: '开发头部组件'
+                        content: '学习语文'
                     },
                     {
                         id: 3,
-                        content: '开发表格相关组件'
+                        content: '学习语文'
                     },
                     {
                         id: 4,
-                        content: '开发表单相关组件'
+                        content: '学习语文'
                     }
                 ],
                 done:[
                     {
                         id: 1,
-                        content: '初始化项目，生成工程目录，完成相关配置'
+                        content: '学习语文'
                     },
                     {
                         id: 2,
-                        content: '开发项目整体框架'
+                        content: '学习语文'
                     }
                 ]
             }
@@ -132,10 +127,10 @@
     }
     .item-title{
         padding: 8px 8px 8px 12px;
-        font-size: 14px;
+        font-size: 25px;
         line-height: 1.5;
         color: #24292e;
-        font-weight: 600;
+        font-weight: 700;
     }
     .item-ul{
         padding: 0 8px 8px;

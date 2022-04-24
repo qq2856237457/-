@@ -2,14 +2,13 @@
     <div>
         <div class="crumbs">
             <el-breadcrumb separator="/">
-                <el-breadcrumb-item><i class="el-icon-lx-calendar"></i> 表单</el-breadcrumb-item>
-                <el-breadcrumb-item>markdown编辑器</el-breadcrumb-item>
+                <el-breadcrumb-item><i class="el-icon-lx-calendar"></i> 管理员界面</el-breadcrumb-item>
+                <el-breadcrumb-item>公告编辑</el-breadcrumb-item>
             </el-breadcrumb>
         </div>
         <div class="container">
             <div class="plugins-tips">
-                mavonEditor：基于Vue的markdown编辑器。
-                访问地址：<a href="https://github.com/hinesboy/mavonEditor" target="_blank">mavonEditor</a>
+                只有用 admin 账号登录的才拥有管理员权限，才能进到这个页面，其他账号想进来都会跳到403页面，重新用管理员账号登录才有权限。
             </div>
             <mavon-editor v-model="content" ref="md" @imgAdd="$imgAdd" @change="change" style="min-height: 600px"/>
             <el-button class="editor-btn" type="primary" @click="submit">提交</el-button>

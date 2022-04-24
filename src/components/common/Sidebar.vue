@@ -62,28 +62,24 @@ export default {
                     title: '系统首页'
                 },
                 {
-                    icon: 'el-icon-lx-cascades',
+                    icon: 'el-icon-lx-redpacket',
                     index: 'table',
                     title: '工资查询'
                 },
                 {
-                    icon: 'el-icon-lx-cascades',
+                    icon: 'el-icon-lx-people',
                     index: 'vacation',
                     title: '请假查询'
                 },
                 {
-                    icon: 'el-icon-lx-cascades',
+                    icon: 'el-icon-lx-service',
                     index: 'work',
                     title: '考勤管理'
-                },{
+                },
+                {
                     icon: 'el-icon-lx-cascades',
                     index: 'manage',
                     title: '绩效管理'
-                },
-                {
-                    icon: 'el-icon-lx-copy',
-                    index: 'tabs',
-                    title: '通知公告'
                 },
                 {
                     icon: 'el-icon-lx-calendar',
@@ -94,23 +90,44 @@ export default {
                             index: 'form',
                             title: '请假审批'
                         },
+                    ]
+                },
+                {
+                    icon: 'el-icon-lx-tag',
+                    index: 'editor',
+                    title: '备忘录'
+                },
+                {
+                    icon: 'el-icon-lx-file',
+                    index: 'upload',
+                    title: '文件上传'
+                },
+                {
+                    icon: 'el-icon-sort',
+                    index: 'drag',
+                     title: '待办事项'
+                },
+                {
+                    icon: 'el-icon-lx-message',
+                    index: 'tabs',
+                    title: '通知公告'
+                },
+                {
+                    icon: 'el-icon-lx-warn',
+                    index: '7',
+                    title: '管理员界面',
+                    subs: [
                         {
-                            index: '3-2',
-                            title: '三级菜单',
-                            subs: [
-                                {
-                                    index: 'editor',
-                                    title: '富文本编辑器'
-                                },
-                                {
-                                    index: 'markdown',
-                                    title: 'markdown编辑器'
-                                }
-                            ]
+                            index: 'permission',
+                            title: '员工管理'
                         },
                         {
-                            index: 'upload',
-                            title: '文件上传'
+                            index: 'markdown',
+                            title: '公告编辑'
+                        },
+                        {
+                            index: '404',
+                            title: '404页面'
                         }
                     ]
                 },
@@ -124,46 +141,6 @@ export default {
                     index: 'charts',
                     title: 'schart图表'
                 },
-                {
-                    icon: 'el-icon-rank',
-                    index: '6',
-                    title: '拖拽组件',
-                    subs: [
-                        {
-                            index: 'drag',
-                            title: '拖拽列表'
-                        },
-                        {
-                            index: 'dialog',
-                            title: '拖拽弹框'
-                        }
-                    ]
-                },
-                {
-                    icon: 'el-icon-lx-global',
-                    index: 'i18n',
-                    title: '国际化功能'
-                },
-                {
-                    icon: 'el-icon-lx-warn',
-                    index: '7',
-                    title: '错误处理',
-                    subs: [
-                        {
-                            index: 'permission',
-                            title: '管理员界面'
-                        },
-                        {
-                            index: '404',
-                            title: '404页面'
-                        }
-                    ]
-                },
-                {
-                    icon: 'el-icon-lx-redpacket_fill',
-                    index: '/donate',
-                    title: '支持作者'
-                }
             ]
         };
     },
