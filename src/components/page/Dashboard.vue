@@ -8,7 +8,6 @@
                         <div class="user-info-cont">
                             <div class="user-info-name">{{userName}}</div>
                             <div :class="getRoleColor()">{{role}}</div>
-                            <div>{{'今日已打卡3小时'}}</div>
                         </div>
                     </div>
                     <div class="user-info-list">
@@ -37,8 +36,8 @@
                             <div class="grid-content grid-con-1">
                                 <i class="el-icon-lx-people grid-con-icon"></i>
                                 <div class="grid-cont-right">
-                                    <div class="grid-num">1234</div>
-                                    <div>用户访问量</div>
+                                    <div class="grid-num">3小时</div>
+                                    <div>今日已打卡</div>
                                 </div>
                             </div>
                         </el-card>
@@ -48,7 +47,7 @@
                             <div class="grid-content grid-con-2">
                                 <i class="el-icon-lx-notice grid-con-icon"></i>
                                 <div class="grid-cont-right">
-                                    <div class="grid-num">321</div>
+                                    <div class="grid-num">3</div>
                                     <div>通知公告</div>
                                 </div>
                             </div>
@@ -59,8 +58,8 @@
                             <div class="grid-content grid-con-3">
                                 <i class="el-icon-lx-goods grid-con-icon"></i>
                                 <div class="grid-cont-right">
-                                    <div class="grid-num">5000</div>
-                                    <div>数量</div>
+                                    <div class="grid-num">10</div>
+                                    <div>待办事项</div>
                                 </div>
                             </div>
                         </el-card>

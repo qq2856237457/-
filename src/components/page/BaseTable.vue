@@ -9,12 +9,6 @@
         </div>
         <div class="container">
             <div class="handle-box">
-                <el-button
-                    type="primary"
-                    icon="el-icon-delete"
-                    class="handle-del mr10"
-                    @click="delAllSelection"
-                >批量删除</el-button>
                 <el-select v-model="query.address" placeholder="项目类型" class="handle-select mr10">
                     <el-option key="1" label="广东省" value="广东省"></el-option>
                     <el-option key="2" label="湖南省" value="湖南省"></el-option>
@@ -32,20 +26,28 @@
             >
                 <el-table-column type="selection" width="55" align="center"></el-table-column>
                 <el-table-column prop="id" label="序号" width="55" align="center"></el-table-column>
-                <el-table-column prop="name" label="项目名称"></el-table-column>
-                <el-table-column label="涉及金额">
-                    <template slot-scope="scope">￥{{scope.row.money}}</template>
+                <el-table-column label="姓名">
+                    <template>{{userName}}</template>
                 </el-table-column>
-                <el-table-column prop="level" label="岗位等级"></el-table-column>
-                <el-table-column label="状态" align="center">
+                <el-table-column prop="part" label="部门" ></el-table-column>
+                <el-table-column prop="level" label="岗位名称"></el-table-column>
+                <el-table-column prop="month" label="核算月份"></el-table-column>
+                <el-table-column label="应发工资">
+                    <template slot-scope="scope">￥{{scope.row.beforeMoney}}</template>
+                </el-table-column>
+                <el-table-column label="实发工资">
+                    <template slot-scope="scope">￥{{scope.row.afterMoney}}</template>
+                </el-table-column>
+                
+                <el-table-column label="核算状态" align="center">
                     <template slot-scope="scope">
                         <el-tag
-                            :type="scope.row.state==='成功'?'success':(scope.row.state==='失败'?'danger':'')"
+                            :type="scope.row.state==='已入账'?'success':(scope.row.state==='未入账'?'danger':'')"
                         >{{scope.row.state}}</el-tag>
                     </template>
                 </el-table-column>
 
-                <el-table-column prop="date" label="入账时间"></el-table-column>
+                <el-table-column prop="date" label="创建时间"></el-table-column>
             </el-table>
             <div class="pagination">
                 <el-pagination
@@ -89,6 +91,7 @@ export default {
                 pageIndex: 1,
                 pageSize: 10
             },
+            userName: localStorage.getItem('ms_username'),
             tableData: [],
             multipleSelection: [],
             delList: [],

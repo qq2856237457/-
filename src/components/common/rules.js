@@ -11,18 +11,17 @@ export default {
         title: '工资查询'
     },
     {
-        icon: 'el-icon-lx-people',
-        index: 'vacation',
-        title: '请假查询'
-    },
-    {
         icon: 'el-icon-lx-calendar',
         index: '3',
-        title: '提交审批',
+        title: '请假',
         subs: [
             {
                 index: 'form',
-                title: '请假审批'
+                title: '提交申请'
+            },
+            {
+                index: 'vacation',
+                title: '请假记录'
             },
         ]
     },
@@ -117,11 +116,15 @@ export default {
     {
         icon: 'el-icon-lx-calendar',
         index: '3',
-        title: '提交审批',
+        title: '请假',
         subs: [
             {
                 index: 'form',
-                title: '请假审批'
+                title: '提交申请'
+            },
+            {
+                index: 'vacation',
+                title: '请假记录'
             },
         ]
     },
