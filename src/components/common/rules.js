@@ -17,11 +17,11 @@ export default {
         subs: [
             {
                 index: 'form',
-                title: '提交申请'
+                title: '提交请假申请'
             },
             {
                 index: 'vacation',
-                title: '请假记录'
+                title: '个人请假记录'
             },
         ]
     },
@@ -99,32 +99,62 @@ export default {
         title: '工资查询'
     },
     {
-        icon: 'el-icon-lx-people',
-        index: 'vacation',
-        title: '请假查询'
-    },
-    {
-        icon: 'el-icon-lx-service',
-        index: 'work',
-        title: '考勤管理'
-    },
-    {
-        icon: 'el-icon-lx-cascades',
-        index: 'manage',
-        title: '绩效管理'
+        icon: 'el-icon-lx-calendar',
+        index: '3',
+        title: '员工管理',
+        subs: [
+            {
+                index: '3-1',
+                title: '绩效管理',
+                subs: [
+                    {
+                        index: 'manage',
+                        title: '查看员工绩效',
+                    },
+                    {
+                        index: 'managecontal',
+                        title: '绩效审批',
+                    }
+                ]
+            },
+            {
+                index: '3-2',
+                title: '考勤管理',
+                subs: [
+                    {
+                        index: 'work',
+                        title: '出勤情况'
+                    }
+                ]
+            },
+            {
+                index: '3-3',
+                title: '请假管理',
+                subs: [
+                    {
+                        index: 'qingjiashenpi',
+                        title: '请假审批'
+                    },
+                    {
+                        index: 'qingjiashenpi',
+                        title: '请假记录'
+                    }
+                ]
+            },
+        ]
     },
     {
         icon: 'el-icon-lx-calendar',
-        index: '3',
+        index: '4',
         title: '请假',
         subs: [
             {
                 index: 'form',
-                title: '提交申请'
+                title: '提交请假申请'
             },
             {
                 index: 'vacation',
-                title: '请假记录'
+                title: '个人请假记录'
             },
         ]
     },
