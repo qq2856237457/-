@@ -8,6 +8,7 @@
                         <div class="user-info-cont">
                             <div class="user-info-name">{{name}}</div>
                             <div>{{role}}</div>
+                            <div>{{'今日已打卡3小时'}}</div>
                         </div>
                     </div>
                     <div class="user-info-list">
@@ -21,11 +22,11 @@
                 </el-card>
                 <el-card shadow="hover" style="height:252px;">
                     <div slot="header" class="clearfix">
-                        <span>语言详情</span>
-                    </div>Vue
-                    <el-progress :percentage="71.3" color="#42b983"></el-progress>JavaScript
-                    <el-progress :percentage="24.1" color="#f1e05a"></el-progress>CSS
-                    <el-progress :percentage="13.7"></el-progress>HTML
+                        <span>项目完成进度</span>
+                    </div>企业投资
+                    <el-progress :percentage="71.3" color="#42b983"></el-progress>行业情况
+                    <el-progress :percentage="24.1" color="#f1e05a"></el-progress>竞品分析
+                    <el-progress :percentage="13.7"></el-progress>用户体验
                     <el-progress :percentage="5.9" color="#f56c6c"></el-progress>
                 </el-card>
             </el-col>
@@ -119,27 +120,27 @@ export default {
             name: localStorage.getItem('ms_username'),
             todoList: [
                 {
-                    title: '今天要修复100个bug',
+                    title: '产品分析会议',
                     status: false
                 },
                 {
-                    title: '今天要修复100个bug',
+                    title: '产品分析会议',
                     status: false
                 },
                 {
-                    title: '今天要写100行代码加几个bug吧',
+                    title: '需求评审',
                     status: false
                 },
                 {
-                    title: '今天要修复100个bug',
+                    title: '产品分析会议',
                     status: false
                 },
                 {
-                    title: '今天要修复100个bug',
+                    title: '产品分析会议',
                     status: true
                 },
                 {
-                    title: '今天要写100行代码加几个bug吧',
+                    title: '需求评审',
                     status: true
                 }
             ],
@@ -176,21 +177,21 @@ export default {
             options: {
                 type: 'bar',
                 title: {
-                    text: '最近一周各品类销售图'
+                    text: '最近一周每天打卡时长图'
                 },
                 xRorate: 25,
                 labels: ['周一', '周二', '周三', '周四', '周五'],
                 datasets: [
                     {
-                        label: '家电',
+                        label: '工作日',
                         data: [234, 278, 270, 190, 230]
                     },
                     {
-                        label: '百货',
+                        label: '加班',
                         data: [164, 178, 190, 135, 160]
                     },
                     {
-                        label: '食品',
+                        label: '休息',
                         data: [144, 198, 150, 235, 120]
                     }
                 ]
@@ -198,20 +199,20 @@ export default {
             options2: {
                 type: 'line',
                 title: {
-                    text: '最近几个月各品类销售趋势图'
+                    text: '最近几个月打卡趋势图'
                 },
                 labels: ['6月', '7月', '8月', '9月', '10月'],
                 datasets: [
                     {
-                        label: '家电',
+                        label: '工作日',
                         data: [234, 278, 270, 190, 230]
                     },
                     {
-                        label: '百货',
+                        label: '加班',
                         data: [164, 178, 150, 135, 160]
                     },
                     {
-                        label: '食品',
+                        label: '休息',
                         data: [74, 118, 200, 235, 90]
                     }
                 ]

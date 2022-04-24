@@ -93,6 +93,11 @@ export default {
                     ]
                 },
                 {
+                    icon: 'el-icon-pie-chart',
+                    index: 'charts',
+                    title: '工作情况'
+                },
+                {
                     icon: 'el-icon-lx-tag',
                     index: 'editor',
                     title: '备忘录'
@@ -131,16 +136,12 @@ export default {
                         }
                     ]
                 },
-                {
-                    icon: 'el-icon-lx-emoji',
-                    index: 'icon',
-                    title: '自定义图标'
-                },
-                {
-                    icon: 'el-icon-pie-chart',
-                    index: 'charts',
-                    title: 'schart图表'
-                },
+                // {
+                //     icon: 'el-icon-lx-emoji',
+                //     index: 'icon',
+                //     title: '自定义图标'
+                // },
+                
             ]
         };
     },
