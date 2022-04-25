@@ -35,11 +35,8 @@
                 <el-table-column type="selection" width="55" align="center"></el-table-column>
                 <el-table-column prop="id" label="序号" width="55" align="center"></el-table-column>
                 <el-table-column prop="name" label="员工姓名"></el-table-column>
-                <el-table-column prop="level" label="岗位等级"></el-table-column>
                 <el-table-column prop="part" label="部门"></el-table-column>
-                <el-table-column prop="money" label="薪资设置">
-                    <template slot-scope="scope">￥{{scope.row.money}}</template>
-                </el-table-column>
+                <el-table-column prop="posname" label="岗位名称"></el-table-column>
                 <el-table-column prop="day" label="考勤">
                   <template slot-scope="scope">出勤{{scope.row.day}}天</template>
                 </el-table-column>

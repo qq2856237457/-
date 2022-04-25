@@ -26,16 +26,16 @@
             >
                 <el-table-column type="selection" width="55" align="center"></el-table-column>
                 <el-table-column prop="id" label="序号" width="55" align="center"></el-table-column>
-                <el-table-column label="姓名">
+                <el-table-column label="姓名" width="80">
                     <template>{{userName}}</template>
                 </el-table-column>
                 <el-table-column prop="part" label="部门" ></el-table-column>
                 <el-table-column prop="level" label="岗位名称"></el-table-column>
                 <el-table-column prop="month" label="核算月份"></el-table-column>
-                <el-table-column label="应发工资">
+                <el-table-column label="应发工资" width="80">
                     <template slot-scope="scope">￥{{scope.row.beforeMoney}}</template>
                 </el-table-column>
-                <el-table-column label="实发工资">
+                <el-table-column label="实发工资" width="80">
                     <template slot-scope="scope">￥{{scope.row.afterMoney}}</template>
                 </el-table-column>
                 
@@ -46,7 +46,7 @@
                         >{{scope.row.state}}</el-tag>
                     </template>
                 </el-table-column>
-                <el-table-column prop="date" label="创建时间"></el-table-column>
+                <el-table-column prop="date" label="创建时间" ></el-table-column>
                 <el-table-column label="操作" width="100" align="center">
                     <template slot-scope="scope">
                         <el-button

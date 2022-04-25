@@ -22,23 +22,18 @@
             >
                 <el-table-column type="selection" width="55" align="center"></el-table-column>
                 <el-table-column prop="id" label="序号" width="55" align="center"></el-table-column>
-                <el-table-column prop="uptime" label="开始时间"></el-table-column>
-                <el-table-column prop="downtime" label="结束时间"></el-table-column>
-                <el-table-column prop="totaltime" label="总时长"></el-table-column>
+                <el-table-column prop="type" label="类型"></el-table-column>
+                <el-table-column prop="counter" label="得分"></el-table-column>
+                <el-table-column prop="content" label="内容"></el-table-column>
                 <el-table-column label="状态" align="center">
                     <template slot-scope="scope">
                         <el-tag
-                            :type="scope.row.state==='已销假'?'success':'danger'"
+                            :type="scope.row.state==='审核通过'?'success':'danger'"
                         >{{scope.row.state}}</el-tag>
                     </template>
                 </el-table-column>
                 <el-table-column label="操作" width="180" align="center">
                     <template slot-scope="scope">
-                        <el-button
-                            type="text"
-                            icon="el-icon-edit"
-                            @click="handleEdit(scope.$index, scope.row)"
-                        >销假</el-button>
                         <el-button
                             type="text"
                             icon="el-icon-delete"
@@ -101,7 +96,7 @@ export default {
     methods: {
         // 获取 easy-mock 的模拟数据
         getData() {
-            fetchData({url: './mock/vacation.json',...this.query}).then(res => {
+            fetchData({url: './mock/managelist.json',...this.query}).then(res => {
                 console.log(res.list);
                 this.tableData = res.list;
                 this.pageTotal = res.pageTotal || 50;

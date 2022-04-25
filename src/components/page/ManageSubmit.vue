@@ -8,53 +8,30 @@
         <div class="container">
             <div class="form-box">
                 <el-form ref="form" :model="form" label-width="80px">
-                    <el-form-item label="请假原因">
-                        <el-input v-model="form.name"></el-input>
-                    </el-form-item>
-                    <el-form-item label="请假类型">
-                        <el-select v-model="form.region" placeholder="请假类型">
-                            <el-option key="bbk" label="事假" value="bbk"></el-option>
-                            <el-option key="xtc" label="病假" value="xtc"></el-option>
-                            <el-option key="imoo" label="休假" value="imoo"></el-option>
+                    
+                    <el-form-item label="考核类型">
+                        <el-select v-model="form.region" placeholder="考核类型">
+                            <el-option key="bbk" label="项目完成情况" value="bbk"></el-option>
+                            <el-option key="xtc" label="工作能力情况" value="xtc"></el-option>
                         </el-select>
                     </el-form-item>
-                    <el-form-item label="开始时间">
-                        <el-col :span="11">
-                            <el-date-picker
-                                type="date"
-                                placeholder="选择日期"
-                                v-model="form.date1"
-                                value-format="yyyy-MM-dd"
-                                style="width: 100%;"
-                            ></el-date-picker>
-                        </el-col>
-                        <el-col class="line" :span="2">-</el-col>
-                        <el-col :span="11">
-                            <el-time-picker
-                                placeholder="选择时间"
-                                v-model="form.date2"
-                                style="width: 100%;"
-                            ></el-time-picker>
-                        </el-col>
+                    <el-form-item label="内容">
+                        <el-input v-model="form.name"></el-input>
                     </el-form-item>
-                    <el-form-item label="结束时间">
-                        <el-col :span="11">
-                            <el-date-picker
-                                type="date"
-                                placeholder="选择日期"
-                                v-model="form.date3"
-                                value-format="yyyy-MM-dd"
-                                style="width: 100%;"
-                            ></el-date-picker>
-                        </el-col>
-                        <el-col class="line" :span="2">-</el-col>
-                        <el-col :span="11">
-                            <el-time-picker
-                                placeholder="选择时间"
-                                v-model="form.date4"
-                                style="width: 100%;"
-                            ></el-time-picker>
-                        </el-col>
+                    <el-form-item label="得分">
+                        <el-select v-model="form.counter" placeholder="得分">
+                            <el-option key="0" label="0" value="0"></el-option>
+                            <el-option key="1" label="1" value="1"></el-option>
+                            <el-option key="2" label="2" value="2"></el-option>
+                            <el-option key="3" label="3" value="3"></el-option>
+                            <el-option key="4" label="4" value="4"></el-option>
+                            <el-option key="5" label="5" value="5"></el-option>
+                            <el-option key="6" label="6" value="6"></el-option>
+                            <el-option key="7" label="7" value="7"></el-option>
+                            <el-option key="8" label="8" value="8"></el-option>
+                            <el-option key="9" label="9" value="9"></el-option>
+                            <el-option key="10" label="10" value="10"></el-option>
+                        </el-select>
                     </el-form-item>
                     <el-form-item label="审批人">
                         <el-cascader :options="options" v-model="form.options"></el-cascader>

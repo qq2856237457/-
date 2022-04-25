@@ -8,6 +8,16 @@
             "state": "已入账",
             "date": "2019-11-1 12:30:24",
             "month": "2019-11"
+        },
+        {
+            "id": 2,
+            "beforeMoney": 123,
+            "afterMoney": 100,
+            "level": "等级一",
+            "part": "研发部",
+            "state": "已入账",
+            "date": "2019-11-1 12:30:24",
+            "month": "2019-11"
         }
     ],
     "pageTotal": 4

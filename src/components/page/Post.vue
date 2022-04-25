@@ -28,7 +28,7 @@
                 <el-table-column prop="department" label="部门"></el-table-column>
                 <el-table-column prop="post" label="岗位"></el-table-column>
                 <el-table-column prop="level" label="等级"></el-table-column>
-                <el-table-column prop="basemoney" label="基本工资"></el-table-column>
+                <!-- <el-table-column prop="basemoney" label="基本工资"></el-table-column> -->
                 <!-- <el-table-column label="状态" align="center">
                     <template slot-scope="scope">
                         <el-tag
