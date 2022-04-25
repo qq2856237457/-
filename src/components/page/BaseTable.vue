@@ -46,8 +46,16 @@
                         >{{scope.row.state}}</el-tag>
                     </template>
                 </el-table-column>
-
                 <el-table-column prop="date" label="创建时间"></el-table-column>
+                <el-table-column label="操作" width="100" align="center">
+                    <template slot-scope="scope">
+                        <el-button
+                            type="text"
+                            icon="el-icon-edit"
+                            @click="handleEdit(scope.$index, scope.row)"
+                        >查看详情</el-button>
+                    </template>
+                </el-table-column>
             </el-table>
             <div class="pagination">
                 <el-pagination
@@ -62,18 +70,39 @@
         </div>
 
         <!-- 编辑弹出框 -->
-        <el-dialog title="编辑" :visible.sync="editVisible" width="30%">
-            <el-form ref="form" :model="form" label-width="70px">
-                <el-form-item label="用户名">
-                    <el-input v-model="form.name"></el-input>
+        <el-dialog title="工资单详情" :visible.sync="editVisible" width="30%">
+            <el-form ref="form" :model="form" label-width="100px">
+                <el-form-item label="出勤天数 :">
+                    {{ moneyDetail.workDay  }}
                 </el-form-item>
-                <el-form-item label="地址">
-                    <el-input v-model="form.address"></el-input>
+                <el-form-item label="加班天数 :">
+                    {{ moneyDetail.addWorkDay  }}
                 </el-form-item>
+                <el-form-item label="基本工资 :">
+                    {{ moneyDetail.baseMoney  }}
+                </el-form-item>
+                <el-form-item label="加班工资 :">
+                    {{ moneyDetail.addWorkDayMoney  }}
+                </el-form-item>
+                <el-form-item label="社保 :">
+                    {{ moneyDetail.social  }}
+                </el-form-item>
+                <el-form-item label="五险一金 :">
+                    {{ moneyDetail.insurance  }}
+                </el-form-item>
+                <el-form-item label="个人所得税 :">
+                    {{ moneyDetail.psersonTax  }}
+                </el-form-item>
+                <el-form-item label="应发工资 :">
+                    {{ moneyDetail.beforeMoney  }}
+                </el-form-item>
+                <el-form-item label="实发工资 :">
+                    {{ moneyDetail.aftereMoney  }}
+                </el-form-item>
+                
             </el-form>
             <span slot="footer" class="dialog-footer">
-                <el-button @click="editVisible = false">取 消</el-button>
-                <el-button type="primary" @click="saveEdit">确 定</el-button>
+                <el-button @click="editVisible = false">确 定</el-button>
             </span>
         </el-dialog>
     </div>
@@ -90,6 +119,18 @@ export default {
                 name: '',
                 pageIndex: 1,
                 pageSize: 10
+            },
+            moneyDetail: {
+                baseMoney: 6700.00,  // 基本工资
+                workDay: 22, // 出勤天数
+                addWorkDay: 2.5, // 加班天数
+                addWorkDayMoney: 700.34, // 加班工资
+                social: 123.23, // 社保
+                insurance: 340.23, // 五险一金
+                psersonTax: 654.98, // 个人所得税
+                beforeMoney: 6789.87, // 应发工资
+                aftereMoney: 6344.36 // 实发工资
+
             },
             userName: localStorage.getItem('ms_username'),
             tableData: [],
@@ -195,4 +236,5 @@ export default {
     width: 40px;
     height: 40px;
 }
+
 </style>
