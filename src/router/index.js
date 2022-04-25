@@ -35,6 +35,26 @@ export default new Router({
                     meta: { title: '请假查询' }
                 },
                 {
+                    path: '/vacationlist',
+                    component: () => import(/* webpackChunkName: "table" */ '../components/page/VacationList.vue'),
+                    meta: { title: '员工请假记录' }
+                },
+                {
+                    path: '/managestep',
+                    component: () => import(/* webpackChunkName: "table" */ '../components/page/ManageStep.vue'),
+                    meta: { title: '绩效审批' }
+                },
+                {
+                    path: '/vacationstep',
+                    component: () => import(/* webpackChunkName: "table" */ '../components/page/VacationStep.vue'),
+                    meta: { title: '请假审批' }
+                },
+                {
+                    path: '/moneylist',
+                    component: () => import(/* webpackChunkName: "table" */ '../components/page/Money.vue'),
+                    meta: { title: '薪资设置' }
+                },
+                {
                     path: '/tabs',
                     component: () => import(/* webpackChunkName: "tabs" */ '../components/page/Tabs.vue'),
                     meta: { title: '通知公告' }
@@ -51,8 +71,23 @@ export default new Router({
                 },
                 {
                     path: '/manage',
-                    component: () => import(/* webpackChunkName: "form" */ '../components/page/Manage.vue'),
+                    component: () => import(/* webpackChunkName: "form" */ '../components/page/ManageList.vue'),
                     meta: { title: '绩效管理' }
+                },
+                {
+                    path: '/manageperson',
+                    component: () => import(/* webpackChunkName: "form" */ '../components/page/ManagePerson.vue'),
+                    meta: { title: '个人绩效记录' }
+                },
+                {
+                    path: '/postmanage',
+                    component: () => import(/* webpackChunkName: "form" */ '../components/page/Post.vue'),
+                    meta: { title: '岗位管理' }
+                },
+                {
+                    path: '/managesubmit',
+                    component: () => import(/* webpackChunkName: "form" */ '../components/page/ManageSubmit.vue'),
+                    meta: { title: '提交绩效申请' }
                 },
                 {
                     // 富文本编辑器组件

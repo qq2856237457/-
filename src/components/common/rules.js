@@ -12,7 +12,7 @@ export default {
     },
     {
         icon: 'el-icon-lx-calendar',
-        index: '3',
+        index: '1',
         title: '请假',
         subs: [
             {
@@ -22,6 +22,21 @@ export default {
             {
                 index: 'vacation',
                 title: '个人请假记录'
+            },
+        ]
+    },
+    {
+        icon: 'el-icon-lx-calendar',
+        index: '2',
+        title: '绩效',
+        subs: [
+            {
+                index: 'managesubmit',
+                title: '提交绩效申请'
+            },
+            {
+                index: 'manageperson',
+                title: '个人绩效记录'
             },
         ]
     },
@@ -76,8 +91,12 @@ export default {
                 title: '公告编辑'
             },
             {
-                index: '404',
-                title: '404页面'
+                index: 'postmanage',
+                title: '岗位管理'
+            },
+            {
+                index: 'moneylist',
+                title: '薪资设置'
             }
         ]
     },
@@ -108,12 +127,12 @@ export default {
                 title: '绩效管理',
                 subs: [
                     {
-                        index: 'manage',
-                        title: '查看员工绩效',
+                        index: 'managestep',
+                        title: '绩效审批',
                     },
                     {
-                        index: 'managecontal',
-                        title: '绩效审批',
+                        index: 'manage',
+                        title: '查看员工绩效',
                     }
                 ]
             },
@@ -132,12 +151,12 @@ export default {
                 title: '请假管理',
                 subs: [
                     {
-                        index: 'qingjiashenpi',
+                        index: 'vacationstep',
                         title: '请假审批'
                     },
                     {
-                        index: 'qingjiashenpi',
-                        title: '请假记录'
+                        index: 'vacationlist',
+                        title: '员工请假记录'
                     }
                 ]
             },

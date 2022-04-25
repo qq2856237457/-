@@ -3,17 +3,16 @@
         <div class="crumbs">
             <el-breadcrumb separator="/">
                 <el-breadcrumb-item>
-                    <i class="el-icon-lx-cascades"></i> 工资查询
+                    <i class="el-icon-lx-cascades"></i> 岗位管理
                 </el-breadcrumb-item>
             </el-breadcrumb>
         </div>
         <div class="container">
+            <div class="plugins-tips">
+                只有用 admin 账号登录的才拥有管理员权限，才能进到这个页面，其他账号想进来都会跳到403页面，重新用管理员账号登录才有权限。
+            </div>
             <div class="handle-box">
-                <el-select v-model="query.address" placeholder="项目类型" class="handle-select mr10">
-                    <el-option key="1" label="广东省" value="广东省"></el-option>
-                    <el-option key="2" label="湖南省" value="湖南省"></el-option>
-                </el-select>
-                <el-input v-model="query.name" placeholder="项目名称" class="handle-input mr10"></el-input>
+                <el-input v-model="query.name" placeholder="岗位名称" class="handle-input mr10"></el-input>
                 <el-button type="primary" icon="el-icon-search" @click="handleSearch">搜索</el-button>
             </div>
             <el-table
@@ -26,34 +25,30 @@
             >
                 <el-table-column type="selection" width="55" align="center"></el-table-column>
                 <el-table-column prop="id" label="序号" width="55" align="center"></el-table-column>
-                <el-table-column label="姓名">
-                    <template>{{userName}}</template>
-                </el-table-column>
-                <el-table-column prop="part" label="部门" ></el-table-column>
-                <el-table-column prop="level" label="岗位名称"></el-table-column>
-                <el-table-column prop="month" label="核算月份"></el-table-column>
-                <el-table-column label="应发工资">
-                    <template slot-scope="scope">￥{{scope.row.beforeMoney}}</template>
-                </el-table-column>
-                <el-table-column label="实发工资">
-                    <template slot-scope="scope">￥{{scope.row.afterMoney}}</template>
-                </el-table-column>
-                
-                <el-table-column label="核算状态" align="center">
+                <el-table-column prop="department" label="部门"></el-table-column>
+                <el-table-column prop="post" label="岗位"></el-table-column>
+                <el-table-column prop="level" label="等级"></el-table-column>
+                <el-table-column prop="basemoney" label="基本工资"></el-table-column>
+                <!-- <el-table-column label="状态" align="center">
                     <template slot-scope="scope">
                         <el-tag
-                            :type="scope.row.state==='已入账'?'success':(scope.row.state==='未入账'?'danger':'')"
+                            :type="scope.row.state==='已销假'?'success':'danger'"
                         >{{scope.row.state}}</el-tag>
                     </template>
-                </el-table-column>
-                <el-table-column prop="date" label="创建时间"></el-table-column>
-                <el-table-column label="操作" width="100" align="center">
+                </el-table-column> -->
+                <el-table-column label="操作" width="180" align="center">
                     <template slot-scope="scope">
                         <el-button
                             type="text"
                             icon="el-icon-edit"
                             @click="handleEdit(scope.$index, scope.row)"
-                        >查看详情</el-button>
+                        >修改</el-button>
+                        <el-button
+                            type="text"
+                            icon="el-icon-delete"
+                            class="red"
+                            @click="handleDelete(scope.$index, scope.row)"
+                        >删除</el-button>
                     </template>
                 </el-table-column>
             </el-table>
@@ -70,42 +65,24 @@
         </div>
 
         <!-- 编辑弹出框 -->
-        <el-dialog title="工资单详情" :visible.sync="editVisible" width="30%">
-            <el-form ref="form" :model="form" label-width="130px">
-                <el-form-item label="出勤天数 :">
-                    {{ moneyDetail.出勤天数  }}
+        <el-dialog title="岗位信息" :visible.sync="editVisible" width="30%">
+            <el-form ref="form" :model="form" label-width="70px">
+                <el-form-item label="部门">
+                    <el-input v-model="form.department"></el-input>
                 </el-form-item>
-                <el-form-item label="加班天数 :">
-                    {{ moneyDetail.加班天数  }}
+                <el-form-item label="岗位">
+                    <el-input v-model="form.post"></el-input>
                 </el-form-item>
-                <el-form-item label="基本工资 :">
-                    {{ moneyDetail.基本工资  }}
+                <el-form-item label="等级">
+                    <el-input v-model="form.level"></el-input>
                 </el-form-item>
-                <el-form-item label="加班工资 :">
-                    {{ moneyDetail.加班工资  }}
+                <el-form-item label="基本工资">
+                    <el-input v-model="form.basemoney"></el-input>
                 </el-form-item>
-                <el-form-item label="奖金 :">
-                    {{ moneyDetail.奖金  }}
-                </el-form-item>
-                <el-form-item label="补贴 :">
-                    {{ moneyDetail.补贴  }}
-                </el-form-item>
-                <el-form-item label="五险一金 (代扣):">
-                     {{ moneyDetail.五险一金  }}
-                </el-form-item>
-                <el-form-item label="个人所得税 (代扣):">
-                    {{ moneyDetail.个人所得税  }}
-                </el-form-item>
-                <el-form-item label="应发工资 :">
-                    {{ moneyDetail.应发工资  }}
-                </el-form-item>
-                <el-form-item label="实发工资 :">
-                    {{ moneyDetail.实发工资  }}
-                </el-form-item>
-                
             </el-form>
             <span slot="footer" class="dialog-footer">
-                <el-button @click="editVisible = false">确 定</el-button>
+                <el-button @click="editVisible = false">取 消</el-button>
+                <el-button type="primary" @click="saveEdit">确 定</el-button>
             </span>
         </el-dialog>
     </div>
@@ -123,20 +100,6 @@ export default {
                 pageIndex: 1,
                 pageSize: 10
             },
-            moneyDetail: {
-                基本工资: 6700.00, 
-                出勤天数: 22,
-                加班天数: 2.5, 
-                加班工资: 700.34, 
-                奖金: 123.23, 
-                补贴: 500.22, 
-                五险一金: 340.23, 
-                个人所得税: 654.98, 
-                应发工资: 6789.87, 
-                实发工资: 6344.36 
-
-            },
-            userName: localStorage.getItem('ms_username'),
             tableData: [],
             multipleSelection: [],
             delList: [],
@@ -153,7 +116,7 @@ export default {
     methods: {
         // 获取 easy-mock 的模拟数据
         getData() {
-            fetchData({url: './mock/money.json',...this.query}).then(res => {
+            fetchData({url: './mock/postmanage.json',...this.query}).then(res => {
                 console.log(res.list);
                 this.tableData = res.list;
                 this.pageTotal = res.pageTotal || 50;
@@ -240,5 +203,4 @@ export default {
     width: 40px;
     height: 40px;
 }
-
 </style>

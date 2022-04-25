@@ -1,0 +1,11 @@
+{
+  "list": [{
+          "id": 1,
+          "department": "商业化",
+          "post": "前端开发",
+          "level": "p1",
+          "basemoney": "7000"
+      }
+  ],
+  "pageTotal": 4
+}
