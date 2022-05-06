@@ -11,17 +11,18 @@
                 只有用 admin 账号登录的才拥有管理员权限，才能进到这个页面，其他账号想进来都会跳到403页面，重新用管理员账号登录才有权限。
             </div>
             <div class="handle-box">
+            
                 <el-button
                     type="primary"
                     icon="el-icon-delete"
                     class="handle-del mr10"
                     @click="delAllSelection"
                 >批量删除</el-button>
-                <el-select v-model="query.address" placeholder="项目类型" class="handle-select mr10">
+                <el-select v-model="query.address" placeholder="部门" class="handle-select mr10">
                     <el-option key="1" label="广东省" value="广东省"></el-option>
                     <el-option key="2" label="湖南省" value="湖南省"></el-option>
                 </el-select>
-                <el-input v-model="query.name" placeholder="项目名称" class="handle-input mr10"></el-input>
+                <el-input v-model="query.name" placeholder="员工姓名" class="handle-input mr10"></el-input>
                 <el-button type="primary" icon="el-icon-search" @click="handleSearch">搜索</el-button>
             </div>
             <el-table
@@ -33,16 +34,18 @@
                 @selection-change="handleSelectionChange"
             >
                 <el-table-column type="selection" width="55" align="center"></el-table-column>
-                <el-table-column prop="id" label="序号" width="55" align="center"></el-table-column>
+                <el-table-column prop="id" label="编号" width="55" align="center"></el-table-column>
                 <el-table-column prop="name" label="员工姓名"></el-table-column>
-                <el-table-column prop="part" label="部门"></el-table-column>
-                <el-table-column prop="posname" label="岗位名称"></el-table-column>
-                <el-table-column prop="day" label="考勤">
+                <el-table-column prop="gender" label="性别"></el-table-column>
+                <el-table-column prop="age" label="年龄"></el-table-column>
+                <el-table-column prop="partId" label="部门编号"></el-table-column>
+                <el-table-column prop="posId" label="岗位编号"></el-table-column>
+                <!-- <el-table-column prop="day" label="考勤">
                   <template slot-scope="scope">出勤{{scope.row.day}}天</template>
-                </el-table-column>
-                <el-table-column prop="manage" label="绩效管理"></el-table-column>
+                </el-table-column> -->
+                <!-- <el-table-column prop="manage" label="绩效管理"></el-table-column> -->
                 <el-table-column prop="date" label="入职时间"></el-table-column>
-                
+                <el-table-column prop="userId" label="用户id"></el-table-column>
                 <el-table-column label="状态" align="center">
                     <template slot-scope="scope">
                         <el-tag
@@ -50,7 +53,6 @@
                         >{{scope.row.state}}</el-tag>
                     </template>
                 </el-table-column>
-
                 <el-table-column label="操作" width="180" align="center">
                     <template slot-scope="scope">
                         <el-button
@@ -82,26 +84,32 @@
         <!-- 编辑弹出框 -->
         <el-dialog title="编辑" :visible.sync="editVisible" width="30%">
             <el-form ref="form" :model="form" label-width="70px">
+                <el-form-item label="员工编号">
+                    <el-input v-model="form.id"></el-input>
+                </el-form-item>
                 <el-form-item label="员工姓名">
                     <el-input v-model="form.name"></el-input>
                 </el-form-item>
-                <el-form-item label="岗位等级">
-                    <el-input v-model="form.level"></el-input>
+                <el-form-item label="性别">
+                    <el-input v-model="form.gender"></el-input>
                 </el-form-item>
-                <el-form-item label="部门">
-                    <el-input v-model="form.part"></el-input>
+                <el-form-item label="年龄" >
+                    <el-input v-model="form.age"></el-input>
                 </el-form-item>
-                <el-form-item label="薪资设置">
-                    <el-input v-model="form.money"></el-input>
+                <el-form-item label="部门编号">
+                    <el-input v-model="form.partId"></el-input>
                 </el-form-item>
-                <el-form-item label="考勤">
+                <!-- <el-form-item label="考勤">
                     <el-input v-model="form.day"></el-input>
-                </el-form-item>
-                <el-form-item label="绩效管理">
-                    <el-input v-model="form.manage"></el-input>
+                </el-form-item> -->
+                <el-form-item label="岗位编号">
+                    <el-input v-model="form.posId"></el-input>
                 </el-form-item>
                 <el-form-item label="入职时间">
                     <el-input v-model="form.date"></el-input>
+                </el-form-item>
+                <el-form-item label="用户id">
+                    <el-input v-model="form.userId"></el-input>
                 </el-form-item>
             </el-form>
             <span slot="footer" class="dialog-footer">
@@ -227,4 +235,5 @@ export default {
     width: 40px;
     height: 40px;
 }
+
 </style>

@@ -87,17 +87,20 @@ export default {
                 title: '员工管理'
             },
             {
-                index: 'markdown',
-                title: '公告编辑'
-            },
-            {
                 index: 'postmanage',
-                title: '岗位管理'
+                title: '部门管理'
             },
             {
                 index: 'moneylist',
                 title: '薪资设置'
+            },
+            
+            {
+                index: 'markdown',
+                title: '公告编辑'
             }
+           
+            
         ]
     },
     // {

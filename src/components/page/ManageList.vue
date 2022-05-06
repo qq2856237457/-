@@ -15,11 +15,11 @@
                     class="handle-del mr10"
                     @click="delAllSelection"
                 >批量删除</el-button>
-                <el-select v-model="query.address" placeholder="项目类型" class="handle-select mr10">
+                <el-select v-model="query.address" placeholder="岗位" class="handle-select mr10">
                     <el-option key="1" label="广东省" value="广东省"></el-option>
                     <el-option key="2" label="湖南省" value="湖南省"></el-option>
                 </el-select>
-                <el-input v-model="query.name" placeholder="项目名称" class="handle-input mr10"></el-input>
+                <el-input v-model="query.name" placeholder="员工姓名" class="handle-input mr10"></el-input>
                 <el-button type="primary" icon="el-icon-search" @click="handleSearch">搜索</el-button>
             </div>
             <el-table
@@ -33,10 +33,11 @@
                 <el-table-column type="selection" width="55" align="center"></el-table-column>
                 <el-table-column prop="id" label="序号" width="55" align="center"></el-table-column>
                 <el-table-column prop="name" label="员工姓名"></el-table-column>
-                <el-table-column prop="level" label="岗位等级"></el-table-column>
+                <el-table-column prop="posname" label="岗位"></el-table-column>
+                <el-table-column prop="part" label="部门"></el-table-column>
                 <el-table-column prop="money" label="业绩考核"></el-table-column>
                 <el-table-column prop="day" label="行为考核">
-                  <template slot-scope="scope">出勤{{scope.row.day}}天</template>
+                  <!-- <template slot-scope="scope">出勤{{scope.row.day}}天</template> -->
                 </el-table-column>
                 <el-table-column prop="date" label="入职时间"></el-table-column>
                 

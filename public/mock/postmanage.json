@@ -1,11 +1,82 @@
 {
   "list": [{
           "id": 1,
-          "department": "商业化",
-          "post": "前端开发",
+          "department": "人事部",
+          "post": "人事经理",
           "level": "p1",
           "basemoney": "7000"
-      }
+    },
+      {
+        "id": 1,
+        "department": "人事部",
+        "post": "人士组长",
+        "level": "p2",
+        "basemoney": "7000"
+    },
+      {
+        "id": 1,
+        "department": "人事部",
+        "post": "人事助理",
+        "level": "p3",
+        "basemoney": "7000"
+    },
+      {
+        "id": 1,
+        "department": "人事部",
+        "post": "文员",
+        "level": "p3",
+        "basemoney": "7000"
+    },
+    {
+      "id": 2,
+      "department": "市场部",
+      "post": "销售经理",
+      "level": "p1",
+      "basemoney": "7000"
+},
+  {
+    "id": 2,
+    "department": "市场部",
+    "post": "销售组长",
+    "level": "p2",
+    "basemoney": "7000"
+},
+  {
+    "id": 2,
+    "department": "市场部",
+    "post": "销售人员",
+    "level": "p3",
+    "basemoney": "7000"
+},
+{
+  "id": 3,
+  "department": "采购部",
+  "post": "采购经理",
+  "level": "p1",
+  "basemoney": "7000"
+},
+{
+"id": 3,
+"department": "采购部",
+"post": "采购组长",
+"level": "p2",
+"basemoney": "7000"
+},
+{
+"id": 3,
+"department": "采购部",
+"post": "采购人员",
+"level": "p3",
+"basemoney": "7000"
+},
+{
+"id": 3,
+"department": "采购部",
+"post": "采购文员",
+"level": "p3",
+"basemoney": "7000"
+}
+        
   ],
   "pageTotal": 4
 }

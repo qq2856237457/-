@@ -82,7 +82,7 @@ export default new Router({
                 {
                     path: '/postmanage',
                     component: () => import(/* webpackChunkName: "form" */ '../components/page/Post.vue'),
-                    meta: { title: '岗位管理' }
+                    meta: { title: '部门管理' }
                 },
                 {
                     path: '/managesubmit',

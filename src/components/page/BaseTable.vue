@@ -9,11 +9,25 @@
         </div>
         <div class="container">
             <div class="handle-box">
-                <el-select v-model="query.address" placeholder="项目类型" class="handle-select mr10">
-                    <el-option key="1" label="广东省" value="广东省"></el-option>
-                    <el-option key="2" label="湖南省" value="湖南省"></el-option>
+                <el-select v-model="query.address" placeholder="核算状态" class="handle-select mr10">
+                    <el-option key="1" label="已入账" value="广东省"></el-option>
+                    <el-option key="2" label="未入账" value="湖南省"></el-option>
                 </el-select>
-                <el-input v-model="query.name" placeholder="项目名称" class="handle-input mr10"></el-input>
+                <el-select v-model="query.address" placeholder="核算月份" class="handle-select mr10">
+                    <el-option key="1" label="2020-01" value="广东省"></el-option>
+                    <el-option key="2" label="2020-02" value="湖南省"></el-option>
+                    <el-option key="3" label="2020-03" value="广东省"></el-option>
+                    <el-option key="4" label="2020-04" value="湖南省"></el-option>
+                    <el-option key="5" label="2020-05" value="广东省"></el-option>
+                    <el-option key="6" label="2020-06" value="湖南省"></el-option>
+                    <el-option key="7" label="2020-07" value="广东省"></el-option>
+                    <el-option key="8" label="2020-08" value="湖南省"></el-option>
+                    <el-option key="9" label="2020-09" value="广东省"></el-option>
+                    <el-option key="10" label="2020-10" value="湖南省"></el-option>
+                    <el-option key="11" label="2020-11" value="广东省"></el-option>
+                    <el-option key="12" label="2020-12" value="湖南省"></el-option>
+                </el-select>
+                <!-- <el-input v-model="query.name" placeholder="项目名称" class="handle-input mr10"></el-input> -->
                 <el-button type="primary" icon="el-icon-search" @click="handleSearch">搜索</el-button>
             </div>
             <el-table

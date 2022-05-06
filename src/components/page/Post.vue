@@ -3,7 +3,7 @@
         <div class="crumbs">
             <el-breadcrumb separator="/">
                 <el-breadcrumb-item>
-                    <i class="el-icon-lx-cascades"></i> 岗位管理
+                    <i class="el-icon-lx-cascades"></i> 部门管理
                 </el-breadcrumb-item>
             </el-breadcrumb>
         </div>
@@ -67,6 +67,9 @@
         <!-- 编辑弹出框 -->
         <el-dialog title="岗位信息" :visible.sync="editVisible" width="30%">
             <el-form ref="form" :model="form" label-width="70px">
+                <el-form-item label="序号">
+                    <el-input v-model="form.id"></el-input>
+                </el-form-item>
                 <el-form-item label="部门">
                     <el-input v-model="form.department"></el-input>
                 </el-form-item>
@@ -76,9 +79,9 @@
                 <el-form-item label="等级">
                     <el-input v-model="form.level"></el-input>
                 </el-form-item>
-                <el-form-item label="基本工资">
+                <!-- <el-form-item label="基本工资">
                     <el-input v-model="form.basemoney"></el-input>
-                </el-form-item>
+                </el-form-item> -->
             </el-form>
             <span slot="footer" class="dialog-footer">
                 <el-button @click="editVisible = false">取 消</el-button>
