@@ -5,7 +5,15 @@
             "content": "移交档案",
             "counter": 5,
             "state": "审核通过"
+        },
+        {
+            "id": 2,
+            "type": "工作能力情况",
+            "content": "有待提高",
+            "counter": 5,
+            "state": "审核通过"
         }
     ],
-    "pageTotal": 4
+    
+    "pageTotal": 2
   }

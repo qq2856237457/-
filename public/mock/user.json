@@ -13,7 +13,7 @@
       "manage": "优秀",
       "posname": "运营",
       "state": "在职",
-      "date": "2020-11-1",
+      "date": "2020-11-01",
       "day": 56
     },
     {
@@ -29,7 +29,7 @@
       "manage": "优秀",
       "posname": "运营",
       "state": "在职",
-      "date": "2022-1-1",
+      "date": "2022-01-01",
       "day": 56
     },
     {
@@ -45,7 +45,7 @@
       "manage": "优秀",
       "posname": "运营",
       "state": "在职",
-      "date": "2018-2-12",
+      "date": "2018-02-12",
       "day": 56
     },
     {
@@ -61,9 +61,25 @@
       "manage": "优秀",
       "posname": "运营",
       "state": "在职",
-      "date": "2022-11-1",
+      "date": "2022-11-01",
+      "day": 56
+    },
+    {
+      "id": 6,
+      "name": "小明",
+      "gender": "男",
+      "age": "22",
+      "partId": "3",
+      "posId": "3",
+      "userId": "PU6",
+      "money": 123,
+      "part": "研发部",
+      "manage": "优秀",
+      "posname": "运营",
+      "state": "在职",
+      "date": "2022-01-01",
       "day": 56
     }
   ],
-  "pageTotal": 4
+  "pageTotal": 5
 }

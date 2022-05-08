@@ -10,14 +10,14 @@
         <div class="container">
             <div class="handle-box">
                 <el-select v-model="query.address" placeholder="核算状态" class="handle-select mr10">
-                    <el-option key="1" label="已入账" value="广东省"></el-option>
+                    <el-option key="" label="已入账" value="已入账"></el-option>
                     <el-option key="2" label="未入账" value="湖南省"></el-option>
                 </el-select>
                 <el-select v-model="query.address" placeholder="核算月份" class="handle-select mr10">
-                    <el-option key="1" label="2020-01" value="广东省"></el-option>
-                    <el-option key="2" label="2020-02" value="湖南省"></el-option>
-                    <el-option key="3" label="2020-03" value="广东省"></el-option>
-                    <el-option key="4" label="2020-04" value="湖南省"></el-option>
+                    <el-option key="1" label="2022-01" value="广东省"></el-option>
+                    <el-option key="2" label="2022-02" value="湖南省"></el-option>
+                    <el-option key="3" label="2022-03" value="已入账"></el-option>
+                    <el-option key="4" label="2022-04" value="湖南省"></el-option>
                     <el-option key="5" label="2020-05" value="广东省"></el-option>
                     <el-option key="6" label="2020-06" value="湖南省"></el-option>
                     <el-option key="7" label="2020-07" value="广东省"></el-option>
@@ -43,17 +43,17 @@
                 <el-table-column label="姓名" width="80">
                     <template>{{userName}}</template>
                 </el-table-column>
-                <el-table-column prop="part" label="部门" ></el-table-column>
-                <el-table-column prop="level" label="岗位名称"></el-table-column>
-                <el-table-column prop="month" label="核算月份"></el-table-column>
-                <el-table-column label="应发工资" width="80">
+                <el-table-column prop="part" label="部门" width="120"></el-table-column>
+                <el-table-column prop="level" label="岗位名称" width="120"></el-table-column>
+                <el-table-column prop="month" label="核算月份" width="120" ></el-table-column>
+                <el-table-column label="应发工资" width="120">
                     <template slot-scope="scope">￥{{scope.row.beforeMoney}}</template>
                 </el-table-column>
-                <el-table-column label="实发工资" width="80">
+                <el-table-column label="实发工资" width="120">
                     <template slot-scope="scope">￥{{scope.row.afterMoney}}</template>
                 </el-table-column>
                 
-                <el-table-column label="核算状态" align="center">
+                <el-table-column label="核算状态" width="120" align="center">
                     <template slot-scope="scope">
                         <el-tag
                             :type="scope.row.state==='已入账'?'success':(scope.row.state==='未入账'?'danger':'')"
@@ -138,16 +138,29 @@ export default {
                 pageSize: 10
             },
             moneyDetail: {
-                基本工资: 6700.00, 
+                基本工资: 4000.00, 
                 出勤天数: 22,
                 加班天数: 2.5, 
-                加班工资: 700.34, 
-                奖金: 123.23, 
-                补贴: 500.22, 
-                五险一金: 340.23, 
-                个人所得税: 654.98, 
-                应发工资: 6789.87, 
-                实发工资: 6344.36 
+                加班工资: 681.81, 
+                奖金: 1600.00, 
+                补贴: 600.00, 
+                五险一金: 604.00, 
+                个人所得税: 38.33, 
+                应发工资: 6881.81, 
+                实发工资: 6239.48 
+
+            },
+            moneyDetai2: {
+                基本工资: 4000.00, 
+                出勤天数: 22,
+                加班天数: 2.0, 
+                加班工资: 545.46, 
+                奖金: 1400.00, 
+                补贴: 600.00, 
+                五险一金: 604.00, 
+                个人所得税: 28.24, 
+                应发工资: 6545.46, 
+                实发工资: 5913.22 
 
             },
             userName: localStorage.getItem('ms_username'),

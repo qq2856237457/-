@@ -12,7 +12,14 @@
                 只有用 admin 账号登录的才拥有管理员权限，才能进到这个页面，其他账号想进来都会跳到403页面，重新用管理员账号登录才有权限。
             </div>
             <div class="handle-box">
-                <el-input v-model="query.name" placeholder="岗位名称" class="handle-input mr10"></el-input>
+                <el-button type="primary" icon="el-icon-lx-add" @click="()=>{this.editVisible = true}">添加</el-button>
+                <el-button
+                    type="primary"
+                    icon="el-icon-delete"
+                    class="handle-del mr10"
+                    @click="delAllSelection"
+                >批量删除</el-button>
+                <el-input v-model="query.name" placeholder="部门名称" class="handle-input mr10"></el-input>
                 <el-button type="primary" icon="el-icon-search" @click="handleSearch">搜索</el-button>
             </div>
             <el-table

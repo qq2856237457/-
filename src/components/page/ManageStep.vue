@@ -63,8 +63,11 @@
         </div>
         <!-- 编辑弹出框 -->
         <el-dialog title="审批详情" :visible.sync="editVisible" width="30%">
+             <!-- <el-form-item label="内容">
+                        <el-input v-model="form.name"></el-input>
+                    </el-form-item> -->
             <el-steps :active="active" finish-status="success" align-center>
-              <el-step title="提交申请" description="这是一段很长很长很长的描述性文字"></el-step>
+              <el-step title="提交申请"  ></el-step>
               <el-step title="直系领导审批"></el-step>
               <el-step title="完成"></el-step>
           </el-steps>
@@ -72,6 +75,24 @@
                 <el-button @click="editVisible = false">取 消</el-button>
                 <el-button type="primary" @click="saveEdit">确 定</el-button>
             </span>
+            <br>
+            <br>
+            <p style="font-size: 18px; color:#303133">考核类型</p>
+            <br>
+            <div style="height:20px; width:25%;border:1px solid rgb(220,223,230);padding-left:2px">项目完成情况</div>
+            <br>
+            <p style="font-size: 18px; color:#303133">内容</p>
+            <br>
+            <div style="height:100px;border:1px solid rgb(220,223,230);padding-left:2px">采购人员采购完毕，货物清点入库</div>
+            <br>
+            <p style="font-size: 18px; color:#303133">得分</p>
+            <br>
+            <div style="height:20px;width:25%;border:1px solid rgb(220,223,230);padding-left:2px ">5</div>
+            <br>
+            <p style="font-size: 18px; color:#303133">附件</p>
+            <br>
+           <div style="height:20px;width:50%;border:1px solid rgb(220,223,230);padding-left:2px "><a href="javascript:;"></a></div>
+            <br>
         </el-dialog>
     </div>
 </template>
@@ -84,16 +105,18 @@
                 message: 'first',
                 editVisible: false,
                 active: 1,
-                unread: [{
-                    date: '2018-04-19 20:00:00',
-                    title: '张三绩效申请',
-                },{
-                    date: '2018-04-19 21:00:00',
-                    title: '李四绩效申请',
+                unread: [
+                //     {
+                //     date: '2018-04-19 20:00:00',
+                //     title: 'Xi Xi绩效申请',
+                // },
+                {
+                    date: '2022-05-04 21:00:00',
+                    title: '小明绩效申请',
                 }],
                 read: [{
-                    date: '2018-04-19 20:00:00',
-                    title: '王五绩效申请'
+                    date: '2022-04-29 20:00:00',
+                    title: '珊珊绩效申请'
                 }],
                 recycle: [{
                     date: '2018-04-19 20:00:00',

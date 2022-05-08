@@ -63,7 +63,7 @@
         </div>
         <!-- 编辑弹出框 -->
         <el-dialog title="审批详情" :visible.sync="editVisible" width="30%">
-            <el-steps :active="active" finish-status="success" align-center>
+            <!-- <el-steps :active="active" finish-status="success" align-center>
               <el-step title="提交申请" description="这是一段很长很长很长的描述性文字"></el-step>
               <el-step title="直系领导审批"></el-step>
               <el-step title="完成"></el-step>
@@ -71,7 +71,34 @@
             <span slot="footer" class="dialog-footer">
                 <el-button @click="editVisible = false">取 消</el-button>
                 <el-button type="primary" @click="saveEdit">确 定</el-button>
+            </span> -->
+             <el-steps :active="active" finish-status="success" align-center>
+              <el-step title="提交申请"  ></el-step>
+              <el-step title="直系领导审批"></el-step>
+              <el-step title="完成"></el-step>
+          </el-steps>
+            <span slot="footer" class="dialog-footer">
+                <el-button @click="editVisible = false">取 消</el-button>
+                <el-button type="primary" @click="saveEdit">确 定</el-button>
             </span>
+            <br>
+            <br> 
+            <p style="font-size: 18px; color:#303133">请假原因</p>
+            <br>
+            <div style="height:50px;border:1px solid rgb(220,223,230);padding-left:2px">家中有事</div>
+            <br>
+            <p style="font-size: 18px; color:#303133">请假类型</p>
+            <br>
+            <div style="height:20px; width:25%;border:1px solid rgb(220,223,230);padding-left:2px">事假</div>
+            <br>
+            <p style="font-size: 18px; color:#303133">开始时间</p>
+            <br>
+            <div style="height:20px;width:50%;border:1px solid rgb(220,223,230);padding-left:2px ">2022-05-02 16：00：00</div>
+            <br>
+            <p style="font-size: 18px; color:#303133">结束时间</p>
+            <br>
+            <div style="height:20px;width:50%;border:1px solid rgb(220,223,230);padding-left:2px ">2022-05-03 16：00：00</div>
+            <br>
         </el-dialog>
     </div>
 </template>
@@ -85,16 +112,20 @@
                 editVisible: false,
                 active: 1,
                 unread: [{
-                    date: '2018-04-19 20:00:00',
-                    title: '张三请假申请',
-                },{
-                    date: '2018-04-19 21:00:00',
-                    title: '李四请假申请',
-                }],
-                read: [{
-                    date: '2018-04-19 20:00:00',
-                    title: '王五请假申请'
-                }],
+                    date: '2022-05-01 20:00:00',
+                    title: '小明请假申请',
+                }
+                // ,{
+                //     date: '2018-04-19 21:00:00',
+                //     title: '小青请假申请',
+                // }
+                ],
+                read: [
+                //     {
+                //     date: '2018-04-19 20:00:00',
+                //     title: '王五请假申请'
+                // }
+                ],
                 recycle: [{
                     date: '2018-04-19 20:00:00',
                     title: '刘鑫请假申请'

@@ -9,7 +9,14 @@
         </div>
         <div class="container">
             <div class="handle-box">
-                <el-input v-model="query.name" placeholder="岗位名称" class="handle-input mr10"></el-input>
+                <el-button type="primary" icon="el-icon-lx-add" @click="()=>{this.editVisible = true}">添加</el-button>
+                <el-button
+                    type="primary"
+                    icon="el-icon-delete"
+                    class="handle-del mr10"
+                    @click="delAllSelection"
+                >批量删除</el-button>
+                <el-input v-model="query.name" placeholder="项目名称" class="handle-input mr10"></el-input>
                 <el-button type="primary" icon="el-icon-search" @click="handleSearch">搜索</el-button>
             </div>
             <el-table
@@ -159,7 +166,7 @@ export default {
         // 保存编辑
         saveEdit() {
             this.editVisible = false;
-            this.$message.success(`修改第 ${this.idx + 1} 行成功`);
+            this.$message.success(`修改成功`);
             this.$set(this.tableData, this.idx, this.form);
         },
         // 分页导航

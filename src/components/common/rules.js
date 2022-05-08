@@ -181,6 +181,21 @@ export default {
         ]
     },
     {
+        icon: 'el-icon-lx-calendar',
+        index: '2',
+        title: '绩效',
+        subs: [
+            {
+                index: 'managesubmit',
+                title: '提交绩效申请'
+            },
+            {
+                index: 'manageperson',
+                title: '个人绩效记录'
+            },
+        ]
+    },
+    {
         icon: 'el-icon-pie-chart',
         index: 'charts',
         title: '工作情况'

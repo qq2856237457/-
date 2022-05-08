@@ -11,7 +11,7 @@
                 只有用 admin 账号登录的才拥有管理员权限，才能进到这个页面，其他账号想进来都会跳到403页面，重新用管理员账号登录才有权限。
             </div>
             <div class="handle-box">
-            
+                <el-button type="primary" icon="el-icon-lx-add" @click="()=>{this.editVisible = true}">添加</el-button>
                 <el-button
                     type="primary"
                     icon="el-icon-delete"
@@ -19,11 +19,12 @@
                     @click="delAllSelection"
                 >批量删除</el-button>
                 <el-select v-model="query.address" placeholder="部门" class="handle-select mr10">
-                    <el-option key="1" label="广东省" value="广东省"></el-option>
-                    <el-option key="2" label="湖南省" value="湖南省"></el-option>
+                    <el-option key="1" label="1" value="1"></el-option>
+                    <el-option key="2" label="2" value="2"></el-option>
                 </el-select>
                 <el-input v-model="query.name" placeholder="员工姓名" class="handle-input mr10"></el-input>
                 <el-button type="primary" icon="el-icon-search" @click="handleSearch">搜索</el-button>
+                
             </div>
             <el-table
                 :data="tableData"

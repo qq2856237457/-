@@ -1,74 +1,34 @@
 {
   "list": [{
           "id": 1,
-          "name": "张三",
+          "name": "小明",
           "money": 123,
-          "uptime":"11:34:34",
-          "downtime":"12:34:34",
-          "totaltime": "3天5小时",
+          "uptime":"2022-01-01 17：00：00",
+          "downtime":"2022-01-02 17：00：00",
+          "totaltime": "1天0小时",
           "state": "已销假",
           "date": "2019-11-1"
       },
       {
         "id": 2,
-        "name": "张三",
+        "name": "小明",
         "money": 123,
-        "uptime":"11:34:34",
-        "downtime":"12:34:34",
-        "totaltime": "3天5小时",
+        "uptime":"2022-02-01 17：00：00",
+        "downtime":"2022-02-02 11：00：00",
+        "totaltime": "0天18小时",
         "state": "未销假",
         "date": "2019-11-1"
     },
     {
         "id": 3,
-        "name": "张三",
+        "name": "小明",
         "money": 123,
-        "uptime":"11:34:34",
-        "downtime":"12:34:34",
-        "totaltime": "3天5小时",
-        "state": "未销假",
-        "date": "2019-11-1"
-    },
-    {
-        "id": 4,
-        "name": "张三",
-        "money": 123,
-        "uptime":"11:34:34",
-        "downtime":"12:34:34",
-        "totaltime": "3天5小时",
-        "state": "已销假",
-        "date": "2019-11-1"
-    },
-    {
-        "id": 5,
-        "name": "张三",
-        "money": 123,
-        "uptime":"11:34:34",
-        "downtime":"12:34:34",
-        "totaltime": "3天5小时",
-        "state": "已销假",
-        "date": "2019-11-1"
-    },
-    {
-        "id": 6,
-        "name": "张三",
-        "money": 123,
-        "uptime":"11:34:34",
-        "downtime":"12:34:34",
-        "totaltime": "3天5小时",
-        "state": "已销假",
-        "date": "2019-11-1"
-    },
-    {
-        "id": 7,
-        "name": "张三",
-        "money": 123,
-        "uptime":"11:34:34",
-        "downtime":"12:34:34",
-        "totaltime": "3天5小时",
+        "uptime":"2022-05-02 16：00：00",
+        "downtime":"2022-05-03 16：00：00",
+        "totaltime": "1天0小时",
         "state": "已销假",
         "date": "2019-11-1"
     }
   ],
-  "pageTotal": 4
+  "pageTotal": 1
 }
