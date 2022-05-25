@@ -195,7 +195,7 @@ export default {
         // 保存编辑
         saveEdit() {
             this.editVisible = false;
-            this.$message.success(`修改第 ${this.idx + 1} 行成功`);
+            this.$message.success('修改成功');
             this.$set(this.tableData, this.idx, this.form);
         },
         // 分页导航
