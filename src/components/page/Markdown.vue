@@ -55,6 +55,9 @@
                 console.log(this.content);
                 console.log(this.html);
                 this.$message.success('提交成功！');
+                setTimeout(()=>{
+                    this.content = '';
+                },200)
             }
         }
     }

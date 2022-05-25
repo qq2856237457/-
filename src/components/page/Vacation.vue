@@ -102,7 +102,6 @@ export default {
         // 获取 easy-mock 的模拟数据
         getData() {
             fetchData({url: './mock/vacation.json',...this.query}).then(res => {
-                console.log(res.list);
                 this.tableData = res.list;
                 this.pageTotal = res.pageTotal || 50;
             });
@@ -148,6 +147,7 @@ export default {
         saveEdit() {
             this.editVisible = false;
             this.$message.success(`销假成功`);
+            this.tableData[this.idx].state = '已销假';
             this.$set(this.tableData, this.idx, this.form);
         },
         // 分页导航

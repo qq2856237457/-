@@ -22,7 +22,7 @@
                         </el-table-column>
                     </el-table>
                     <div class="handle-row">
-                        <el-button type="primary">全部标为已读</el-button>
+                        <el-button type="primary" @click="handleAllRead">全部标为已读</el-button>
                     </div>
                 </el-tab-pane>
                 <el-tab-pane :label="`已读消息(${read.length})`" name="second">
@@ -99,6 +99,14 @@
                 const item = this.unread.splice(index, 1);
                 console.log(item);
                 this.read = item.concat(this.read);
+            },
+            handleAllRead() {
+                // alert(1);
+                while(this.unread.length > 0){
+                    const item = this.unread.pop();
+                    console.log(item);
+                    this.read.push(item);
+                }
             },
             handleDel(index) {
                 const item = this.read.splice(index, 1);

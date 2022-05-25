@@ -8,7 +8,7 @@
         <div class="container">
             <div class="drag-box">
                 <div class="drag-box-item">
-                    <div class="item-title">todo</div>
+                    <div class="item-title">即将要做的事</div>
                     <draggable v-model="todo" @remove="removeHandle" :options="dragOptions">
                         <transition-group tag="div" id="todo" class="item-ul">
                             <div v-for="item in todo" class="drag-list" :key="item.id">
@@ -18,7 +18,7 @@
                     </draggable>
                 </div>
                 <div class="drag-box-item">
-                    <div class="item-title">doing</div>
+                    <div class="item-title">正在做的事</div>
                     <draggable v-model="doing" @remove="removeHandle" :options="dragOptions">
                         <transition-group tag="div" id="doing" class="item-ul">
                             <div v-for="item in doing" class="drag-list" :key="item.id">
@@ -28,7 +28,7 @@
                     </draggable>
                 </div>
                 <div class="drag-box-item">
-                    <div class="item-title">done</div>
+                    <div class="item-title">已完成的事</div>
                     <draggable v-model="done" @remove="removeHandle" :options="dragOptions">
                         <transition-group tag="div" id="done" class="item-ul">
                             <div v-for="item in done" class="drag-list" :key="item.id">
