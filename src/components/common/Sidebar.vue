@@ -73,9 +73,11 @@ export default {
     },
     mounted(){
         const userName = localStorage.getItem('ms_username');
+        var reg0 =/^A.*/i; 
+        var reg1 =/^L.*/i; 
         this.items = 
-            userName === 'admin' ? rules.adminItems
-            : userName === 'leader' ? rules.leaderItems : rules.commonItems;
+           reg0.test(userName) ? rules.adminItems
+            : reg1.test(userName) ? rules.leaderItems : rules.commonItems;
     }
 };
 </script>
