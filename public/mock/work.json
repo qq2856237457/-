@@ -1,66 +1,66 @@
 {
   "list": [{
           "id": 1,
-          "name": "张三",
+          "name": "小明",
           "money": 123,
-          "uptime":"11:34:34",
-          "downtime":"12:34:34",
+          "uptime":"10:34:14",
+          "downtime":"20:04:34",
           "state": "正常",
-          "date": "2019-11-1"
+          "date": "2022-5-20"
       },
       {
         "id": 2,
-        "name": "李四",
+        "name": "小红",
         "money": 123,
-        "uptime":"11:34:34",
-        "downtime":"-",
+        "uptime":"11:03:56",
+        "downtime":"20:02:17",
         "state": "迟到",
-        "date": "2019-11-1"
+        "date": "2022-5-20"
     },
     {
         "id": 3,
-        "name": "张三",
+        "name": "小河",
         "money": 123,
-        "uptime":"11:34:34",
-        "downtime":"12:34:34",
+        "uptime":"11:14:36",
+        "downtime":"19:02:17",
         "state": "迟到且早退",
-        "date": "2019-11-1"
+        "date": "2022-5-20"
     },
     {
         "id": 4,
-        "name": "张三",
+        "name": "小李",
         "money": 123,
-        "uptime":"11:34:34",
-        "downtime":"12:34:34",
+        "uptime":"10:23:42",
+        "downtime":"20:04:34",
         "state": "正常",
-        "date": "2019-11-1"
+        "date": "2022-5-20"
     },
     {
         "id": 5,
-        "name": "张三",
+        "name": "小丽",
         "money": 123,
-        "uptime":"11:34:34",
-        "downtime":"12:34:34",
+        "uptime":"10:19:57",
+        "downtime":"20:17:12",
         "state": "正常",
-        "date": "2019-11-1"
+        "date": "2022-5-20"
     },
     {
         "id": 6,
-        "name": "张三",
+        "name": "小马",
         "money": 123,
-        "uptime":"11:34:34",
-        "downtime":"12:34:34",
+        "uptime":"10:45:42",
+        "downtime":"20:07:38",
         "state": "正常",
-        "date": "2019-11-1"
+        "date": "2022-5-20"
     },
     {
         "id": 7,
-        "name": "张三",
+        "name": "小芳",
         "money": 123,
-        "uptime":"11:34:34",
-        "downtime":"12:34:34",
+        "uptime":"10:26:54",
+        "downtime":"20:27:01",
         "state": "正常",
-        "date": "2019-11-1"
+        "date": "2022-5-20"
     }
   ],
   "pageTotal": 4

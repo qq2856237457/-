@@ -12,8 +12,15 @@
             "content": "有待提高",
             "counter": 5,
             "state": "审核通过"
+        },
+        {
+            "id": 3,
+            "type": "项目完成情况",
+            "content": "采购人员采购完毕，货物清点入库",
+            "counter": 8,
+            "state": "待审核"
         }
     ],
     
-    "pageTotal": 2
+    "pageTotal": 3
   }

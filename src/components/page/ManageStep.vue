@@ -79,15 +79,15 @@
             <br>
             <p style="font-size: 18px; color:#303133">考核类型</p>
             <br>
-            <div style="height:20px; width:25%;border:1px solid rgb(220,223,230);padding-left:2px">项目完成情况</div>
+            <div style="height:20px; width:25%;border:1px solid rgb(255,255,255);padding-left:2px">项目完成情况</div>
             <br>
             <p style="font-size: 18px; color:#303133">内容</p>
             <br>
-            <div style="height:100px;border:1px solid rgb(220,223,230);padding-left:2px">采购人员采购完毕，货物清点入库</div>
+            <div style="height:100px;border:1px solid  rgb(255,255,255);padding-left:2px">采购人员采购完毕，货物清点入库</div>
             <br>
             <p style="font-size: 18px; color:#303133">得分</p>
             <br>
-            <div style="height:20px;width:25%;border:1px solid rgb(220,223,230);padding-left:2px ">5</div>
+            <div style="height:20px;width:25%;border:1px solid  rgb(255,255,255);padding-left:2px ">8</div>
             <br>
             <p style="font-size: 18px; color:#303133">附件</p>
             <br>
